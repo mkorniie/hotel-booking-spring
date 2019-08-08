@@ -6,6 +6,7 @@ import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,7 @@ public class User implements Serializable {
 //    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 //    @Getter @Setter                             private Set<Request> requests;
 
-    public User(String name, Role role, String passwordEncoded, String email, Language language) {
+    public User(@NotNull String name, @NotNull Role role, @NotNull String passwordEncoded, @NotNull String email, @NotNull Language language) {
         setName(name);
         setRole(role);
         setPasswordEncoded(passwordEncoded);
@@ -55,49 +56,24 @@ public class User implements Serializable {
         logger.info("Object User successfully created");
     }
 
-    public void setName(String name) {
-        if (name != null) {
-            this.name = name;
-        } else {
-            logger.error("Error: 'name' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setName(@NotNull String name) {
+        this.name = name;
     }
 
-    public void setPasswordEncoded(String passwordEncoded) {
-        if (passwordEncoded != null) {
-            this.passwordEncoded = passwordEncoded;
-        } else {
-            logger.error("Error: 'passwordEncoded' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setPasswordEncoded(@NotNull String passwordEncoded) {
+        this.passwordEncoded = passwordEncoded;
     }
 
-    public void setEmail(String email) {
-        if (email != null) {
-            this.email = email;
-        } else {
-            logger.error("Error: 'email' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setEmail(@NotNull String email) {
+        this.email = email;
     }
 
-    public void setRole(Role role) {
-        if (role != null) {
-            this.role = role;
-        } else {
-            logger.error("Error: 'role' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setRole(@NotNull Role role) {
+        this.role = role;
     }
 
-    public void setLanguage(Language language) {
-        if (language != null) {
-            this.language = language;
-        } else {
-            logger.error("Error: 'language' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setLanguage(@NotNull Language language) {
+        this.language = language;
     }
 
     @Override
