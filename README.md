@@ -7,7 +7,6 @@ lorem ipsum
 Использовано:
  - Java 8:
    - Streams
-   - Optionals
  - Spring:
     - Spring Boot
     - Spring Security

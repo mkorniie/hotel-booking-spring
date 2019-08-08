@@ -36,7 +36,7 @@
         <div th:if="${param.logout}" class="alert alert-success">
             You have been logged out.
         </div>
-        <form action="login" method="post">
+        <form action="#" th:action="@{/login}" method="post">
             <input type="text" id="login" class="fadeIn second" name="username" th:placeholder="#{login.placeholder}">
             <input type="text" id="password" class="fadeIn third" name="password" th:placeholder="#{password.placeholder}">
             <input type="submit" class="fadeIn fourth" th:value="#{submit.value}">

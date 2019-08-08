@@ -10,15 +10,17 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
-import ua.mkorniie.model.exceptions.LanguageNotFoundException;
-import ua.mkorniie.model.exceptions.NotEnoughDataException;
 import ua.mkorniie.model.pojo.User;
+import ua.mkorniie.model.util.StringConverter;
 import ua.mkorniie.model.util.directions.Pathes;
 
+import javax.servlet.http.HttpSession;
 import java.util.Locale;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
@@ -29,6 +31,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class MainController {
     private static final Logger logger = getLogger(MainController.class);
     @Autowired private UserRepository userDAO;
+    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
 //    @GetMapping("/main")
 //    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
@@ -63,7 +66,6 @@ public class MainController {
     public String registerPost(@RequestParam(name = "name", required=true) String name,
                                @RequestParam(name = "email", required=true) String email,
                                @RequestParam(name="password", required=true) String pass) {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         Locale locale = LocaleContextHolder.getLocale();
 
         User newUser = null;
@@ -83,12 +85,47 @@ public class MainController {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String loginGet() {
+        return LOGIN.getCropURL();
+    }
+
+    @PostMapping("/login")
+    public String loginPost(@RequestParam(name = "username", required = true) String username,
+                            @RequestParam(name = "password", required = true) String password) {
+        User u = null;
+        try {
+             u = userDAO.findByName(username);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+
+        try {
+            if (u == null) {
+                return GENERAL_ERROR.getCropURL();
+            }
+            else if (encoder.matches(password, u.getPasswordEncoded())) {
+
+                ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+                HttpSession session = attr.getRequest().getSession(true);
+                session.setAttribute("user", u);
+                LocaleContextHolder.setLocale(new Locale(u.getLanguage().name()));
+                if (u.getRole() == Role.USER) {
+                    return USER_MAIN_PAGE.getCropURL();
+                } else if (u.getRole() == Role.ADMIN) {
+                    return ADMIN_MAIN_PAGE.getCropURL();
+                }
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
         return LOGIN.getCropURL();
     }
 
     @GetMapping("/logout")
     public String logout() {
+        ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+        HttpSession session = attr.getRequest().getSession(true);
+        session.invalidate();
         return index();
     }
 
