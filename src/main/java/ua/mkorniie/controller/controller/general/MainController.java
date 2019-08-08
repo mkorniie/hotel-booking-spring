@@ -15,6 +15,7 @@ import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.exceptions.LanguageNotFoundException;
+import ua.mkorniie.model.exceptions.NotEnoughDataException;
 import ua.mkorniie.model.pojo.User;
 import ua.mkorniie.model.util.directions.Pathes;
 
@@ -67,7 +68,13 @@ public class MainController {
 
         User newUser = null;
         try {
-            newUser = new User(name, Role.USER, encoder.encode(pass), email, Language.of(locale));
+            newUser = new User.Builder()
+                    .withName(name)
+                    .withRole(Role.USER)
+                    .withPasswordEncoded(encoder.encode(pass))
+                    .withEmail(email)
+                    .withLanguage(Language.of(locale))
+                    .build();
             userDAO.save(newUser);
         } catch (Exception e) {
             log.error(e.getMessage());

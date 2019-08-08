@@ -4,6 +4,7 @@ import lombok.*;
 import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
+import ua.mkorniie.model.exceptions.NotEnoughDataException;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -74,6 +75,56 @@ public class User implements Serializable {
 
     public void setLanguage(@NotNull Language language) {
         this.language = language;
+    }
+
+    public static class Builder {
+        private User u;
+
+        /***
+         * The Builder class, standard architecture pattern, allows to create new object of User class.
+         * All parameters should be present (except Id); otherwise, throws NotEnoughDataException.
+         */
+        public Builder() {
+            u = new User();
+        }
+
+        public Builder withName(@NotNull String name) {
+            u.name = name;
+            return this;
+        }
+
+        public Builder withRole(@NotNull Role role) {
+            u.role = role;
+
+            return this;
+        }
+
+        public Builder withPasswordEncoded(@NotNull String pass) {
+            u.passwordEncoded = pass;
+
+            return this;
+        }
+
+        public Builder withEmail(@NotNull String email) {
+            u.email = email;
+
+            return this;
+        }
+
+        public Builder withLanguage(@NotNull Language language) {
+            u.language = language;
+
+            return this;
+        }
+
+        public User build() throws NotEnoughDataException {
+            if (u.name == null || u.role == null ||
+            u.passwordEncoded == null || u.email == null || u.language == null) {
+                throw new NotEnoughDataException("Not enough data to build object User : " + u);
+            }
+            return u;
+        }
+
     }
 
     @Override
