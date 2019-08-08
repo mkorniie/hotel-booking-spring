@@ -26,7 +26,6 @@ public class Request {
     @Getter @Setter private Long                 id;
 
     @ManyToOne
-//    @JoinColumn
     @Getter         private User                user;
 
     @Getter @Setter  @Basic(optional = false) private int                 places;

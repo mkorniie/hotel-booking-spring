@@ -3,15 +3,22 @@ package ua.mkorniie.controller.controller.general;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import ua.mkorniie.controller.dao.UserRepository;
+import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
+import ua.mkorniie.model.exceptions.LanguageNotFoundException;
+import ua.mkorniie.model.pojo.User;
 import ua.mkorniie.model.util.directions.Pathes;
+
+import java.util.Locale;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -20,13 +27,13 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Controller
 public class MainController {
     private static final Logger logger = getLogger(MainController.class);
-    @Autowired private UserRepository userRepository;
+    @Autowired private UserRepository userDAO;
 
 //    @GetMapping("/main")
 //    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 //        model.addAttribute("name", name);
 //
-//        List<User> users = userRepository.findByName(name);
+//        List<User> users = userDAO.findByName(name);
 //        Long id = -1L;
 //        for (User u : users) {
 //            id = u.getId();
@@ -46,8 +53,26 @@ public class MainController {
     }
 
     @GetMapping("/register")
-    public String register() {
+    public String registerGet() {
         return REGISTER.getCropURL();
+    }
+
+    //TODO: don't forget to add full commit info
+    @PostMapping("/register")
+    public String registerPost(@RequestParam(name = "name", required=true) String name,
+                               @RequestParam(name = "email", required=true) String email,
+                               @RequestParam(name="password", required=true) String pass) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        Locale locale = LocaleContextHolder.getLocale();
+
+        User newUser = null;
+        try {
+            newUser = new User(name, Role.USER, encoder.encode(pass), email, Language.of(locale));
+            userDAO.save(newUser);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+        return newUser == null ? registerGet() : LOGIN.getCropURL();
     }
 
     @GetMapping("/login")

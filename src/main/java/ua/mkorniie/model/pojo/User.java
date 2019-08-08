@@ -29,7 +29,7 @@ public class User implements Serializable {
     private static final Logger logger = Logger.getLogger(Room.class);
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Getter @Setter                             private Long           id;
 
     @Column(unique = true, columnDefinition="NVARCHAR(255)")
