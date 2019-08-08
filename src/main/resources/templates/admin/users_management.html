@@ -1,0 +1,113 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="#{a.header.users}">Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon"
+          href="https://www.pinclipart.com/picdir/big/163-1634137_brochure-markant-online-books-icons-clipart.png"
+          type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal" th:text="#{a.header.welcome}">Welcome, My Lord</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{a.header.main}">Requests</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_USERS.getUrl()}" th:text="#{a.header.users}">Users</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_TABLES.getUrl()}" th:text="#{a.header.tables}">Tables</a>
+    </nav>
+    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
+</div>
+
+<div style="padding:2px 20px">
+    <a href="/admin/users?lang=ua"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
+    <a href="/admin/users?lang=en"><img width="25px" src="/img/us-01.png" alt="en"></a>
+</div>
+<br>
+<div class="m-4"><h2 th:text="#{a.header.users}">Users</h2></div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col" th:text="#{u.name}">Name</th>
+        <th scope="col" th:text="#{u.role}">Role</th>
+        <th scope="col" th:text="#{u.email}">Email</th>
+        <th scope="col" th:text="#{u.lang}">Language</th>
+        <th scope="col" th:text="#{u.del}">Delete</th>
+        <th scope="col" th:text="#{u.change}">Change privileges</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="u : *{entries}">
+        <th scope="row" th:text="${u.getId()}"></th>
+        <td th:text="${u.getName()}"></td>
+        <td th:text="${u.getRole()}"></td>
+        <td th:text="${u.getEmail()}"></td>
+        <td th:text="${u.getLanguage()}"%></td>
+
+        <td><a th:href="'/admin-users?method=remove&id=' + ${u.getId()}" th:text="#{u.del}">Remove</a></td>
+        <td>
+            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).USER}" th:href="'/admin/users?method=priviledge_a&id=' + ${u.getId()}" th:text="#{u.to.a}">To Admin</a>
+            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).ADMIN}" th:href="'/admin/users?method=priviledge_u&id='+ ${u.getId()}" th:text="#{u.to.u}">To User</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<nav aria-label="my-nav">
+    <ul class="pagination">
+<!--<%&#45;&#45;        <%  Integer pageCount = (Integer) request.getAttribute("page-count");&#45;&#45;%>-->
+<!--<%&#45;&#45;            Integer active = (Integer) request.getAttribute("active-page");&#45;&#45;%>-->
+<!--<%&#45;&#45;            for(int i  = 1; i <= pageCount; i++) {&#45;&#45;%>-->
+<!--<%&#45;&#45;                if (i == active) {%>&#45;&#45;%>-->
+<!--<%&#45;&#45;        <li class="page-item active"><a class="page-link" href="/admin-users?page=<%=i%>"><%=i%></a></li>&#45;&#45;%>-->
+<!--<%&#45;&#45;        <%} else {%>&#45;&#45;%>-->
+<!--<%&#45;&#45;        <li class="page-item"><a class="page-link" href="/admin-users?page=<%=i%>"><%=i%></a></li>&#45;&#45;%>-->
+<!--<%&#45;&#45;        <%}&#45;&#45;%>-->
+<!--<%&#45;&#45;        }%>&#45;&#45;%>-->
+    </ul>
+</nav>
+<br>
+<div class="m-4"><h3 th:text="#{u.add}">Add user</h3></div>
+<form action="/admin-users-update" method="post" class="m-4">
+    <div class="form-row">
+        <div class="form-group col-2">
+            <label for="name" th:text="#{u.u.name}">User name</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group col-2">
+            <label for="pass" th:text="#{u.pass}">Password</label>
+            <input type="text" class="form-control" id="pass" name="pass">
+        </div>
+
+        <div class="form-group col-2">
+            <label for="role" th:text="#{u.role}">Role</label>
+            <select class="browser-default custom-select" id="role" name="role">
+                <option th:each="val : ${T(ua.mkorniie.model.enums.Role).values()}"
+                        th:value="${val}"
+                        th:text="${val}">
+            </select>
+        </div>
+        <div class="form-group col-2">
+            <label for="mail" th:text="#{u.email}">Email</label>
+            <input type="email" class="form-control" id="mail" name="mail">
+        </div>
+        <div class="form-group col-2">
+            <label for="lang" th:text="#{u.lang}">Language</label>
+            <select class="browser-default custom-select" id="lang" name="lang">
+                <option th:each=" val : ${T(ua.mkorniie.model.enums.Language).values()}"
+                        th:value="${val}"
+                        th:text="${val}">
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" th:text="#{user.main.req.btn}">Add</button>
+</form>
+
+<div class="m-4">
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

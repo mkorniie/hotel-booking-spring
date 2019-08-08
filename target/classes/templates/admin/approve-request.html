@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <title th:text="#{approve.req.title}">Approve Request</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel = "icon" href ="https://www.pinclipart.com/picdir/big/163-1634137_brochure-markant-online-books-icons-clipart.png"
+              type = "image/x-icon">
+        <link rel="stylesheet" th:href="../static/css/style.css">
+    </head>
+</head>
+
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal" th:text="#{a.header.welcome}">Welcome, My Lord</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{a.header.main}">Requests</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_USERS.getUrl()}" th:text="#{a.header.users}">Users</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_TABLES.getUrl()}" th:text="#{a.header.tables}">Tables</a>
+    </nav>
+    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
+</div>
+<div style="padding:2px 20px">
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
+</div>
+<br>
+<h3 class="m-4" th:text="#{new.req.title}">New Requests</h3>
+
+<!--<%  Request req = (Request) request.getAttribute("selected-request");%>-->
+<form th:action="${T(ua.mkorniie.model.util.directions.Pathes).APPROVE_REQ.getUrl()}" method="post" class="m-4">
+    <div class="form-row">
+        <div class="form-group col-1">
+            <label for="id">#</label>
+            <input type="number" th:value="<%=req.getId()%>" class="form-control" id="id" name="id">
+        </div>
+        <div class="form-group col-1">
+            <label for="places" th:text="#{approve.req.form.places}">Places</label>
+            <input type="number" value="<%=req.getPlaces()%>" class="form-control" id="places" name="places" disabled>
+        </div>
+        <div class="form-group col-2">
+            <label for="class" th:text="#{approve.req.form.class}">Class</label>
+            <input type="text" id="class" class="form-control"  value="<%=req.getRoomClass()%>" name="class" disabled>
+        </div>
+        <div class="form-group col-2">
+            <label for="start-date" th:text="#{approve.req.form.start.d}">Start Date</label>
+            <input type="text" id="start-date" class="form-control"  value="<%=req.getStartDate()%>" name="start-date" disabled />
+        </div>
+        <div class="form-group col-2">
+            <label for="end-date" th:text="#{approve.req.form.end.d}">End Date</label>
+            <input type="text" id="end-date" class="form-control"  value="<%=req.getEndDate()%>" name="end-date" disabled />
+        </div>
+        <div class="form-group col-2">
+            <label for="room-select" th:text="#{approve.req.form.room.id}" >Room Id</label>
+            <select id="room-select" name="room-select">
+<!--                <% List<Room> matchingRooms = (List<Room>) request.getAttribute("entries");-->
+<!--                    for (int i = 0; i < matchingRooms.size(); i++){%>-->
+<!--                        <option value="<%=matchingRooms.get(i).getId()%>"><%=matchingRooms.get(i).getId()%></option>-->
+<!--                <%}%>-->
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" th:text="#{approve.btn}" >Approve</button>
+</form>
+
+<br>
+
+<h2>Rooms</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col" th:text="#{room.pic}" >Picture</th>
+        <th scope="col" th:text="#{room.place}">Places</th>
+        <th scope="col" th:text="#{room.room.c}">Rooms Class</th>
+        <th scope="col" th:text="#{room.price}">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each=" r : *{entries}">
+            <th scope="row" th:text="${r.getId()}"> room id </th>
+                <td><img height="120px" th:src="${r.getPicURL()}" alt="room"></td>
+                <td th:text="${r.getPlaces()}"> Places </td>
+                <td th:text="${r.getRoomClass().name()}"> Room Class </td>
+                <td th:text="${r.getPrice()}"> Price </td>
+                <td th:text="${r.isOccupied()}"> Occupied </td>
+        </tr>
+    </tbody>
+</table>
+<nav aria-label="my-nav">
+    <ul class="pagination">
+<!--        <%  Integer pageCount = (Integer) request.getAttribute("page-count");-->
+<!--            Integer active = (Integer) request.getAttribute("active-page");-->
+<!--            for(int i  = 1; i <= pageCount; i++) {-->
+<!--                if (i == active) {%>-->
+<!--                    <li class="page-item active"><a class="page-link" href="/approve?&page=<%=i%>"><%=i%></a></li>-->
+<!--                    <%} else {%>-->
+<!--                    <li class="page-item"><a class="page-link" href="/approve?&page=<%=i%>"><%=i%></a></li>-->
+<!--                    <%}-->
+<!--            }%>-->
+    </ul>
+</nav>
+<div class="m-4">
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>
+</div>
+
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
