@@ -88,6 +88,11 @@ public class User implements Serializable {
             u = new User();
         }
 
+        public Builder withId(@NotNull Long id) {
+            u.id = id;
+            return this;
+        }
+
         public Builder withName(@NotNull String name) {
             u.name = name;
             return this;

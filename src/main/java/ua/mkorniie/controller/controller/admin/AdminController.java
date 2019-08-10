@@ -2,19 +2,24 @@ package ua.mkorniie.controller.controller.admin;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.dao.BillRepository;
 import ua.mkorniie.controller.dao.RequestRepository;
 import ua.mkorniie.controller.dao.RoomRepository;
 import ua.mkorniie.controller.dao.UserRepository;
+import ua.mkorniie.model.enums.Language;
+import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.Room;
+import ua.mkorniie.model.pojo.User;
 
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
@@ -40,6 +45,7 @@ public class AdminController {
     private final UserRepository userDAO;
     private final RoomRepository roomDAO;
     private List<RoomClass> classes = Arrays.asList(RoomClass.values());
+    private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     AdminController(RequestRepository requestDAO, BillRepository billDAO, UserRepository userDAO, RoomRepository roomDAO) {
         this.requestDAO = requestDAO;
@@ -72,7 +78,22 @@ public class AdminController {
     }
 
     @GetMapping("/admin/users")
-    public String getUsers(Model model) {
+    public String getUsers(Model model,
+                           @RequestParam(name = "method", required = false) String method,
+                           @RequestParam(name = "id", required = false) Long id) {
+        if(method != null && id != null) {
+            if (method.equals("remove"))
+                userDAO.deleteById(id);
+            else if (method.equals("priviledge_a") || method.equals("priviledge_u")){
+                Optional<User> optionalUser = userDAO.findById(id);
+                if (optionalUser.isPresent()) {
+                    User user = optionalUser.get();
+                    user.setRole(method.equals("priviledge_a") ? Role.ADMIN : Role.USER);
+                    userDAO.save(user);
+                }
+            }
+        }
+
         model.addAttribute("entries", userDAO.findAll());
         return ADMIN_USERS_PAGE.getCropURL();
     }
@@ -140,6 +161,28 @@ public class AdminController {
 
         }
         return matching;
+    }
+
+    @PostMapping("/admin/users-update")
+    public String userUpdatePost(Model model, @RequestParam(name = "name") String name,
+                               @RequestParam(name = "mail") String email,
+                               @RequestParam(name="pass") String pass,
+                                 @RequestParam(name="role") String role,
+                                 @RequestParam(name="lang") String language) {
+        try {
+            User newUser = new User.Builder()
+                    .withName(name)
+                    .withRole(Role.valueOf(role))
+                    .withPasswordEncoded(encoder.encode(pass))
+                    .withEmail(email)
+                    .withLanguage(Language.valueOf(language))
+                    .build();
+            userDAO.save(newUser);
+        } catch (Exception e) {
+            log.error("Impossible to create User at admin/users: " +
+                    e.getMessage());
+        }
+        return getUsers(model, null, null);
     }
 }
 

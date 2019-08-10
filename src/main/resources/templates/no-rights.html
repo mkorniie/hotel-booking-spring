@@ -11,16 +11,5 @@
     <h1 class="display-4" th:text="#{access.den.err}"></h1>
     <p class="lead" th:text="#{access.den.err.text}"></p>
     <br>
-    <a href= <% User u = (User)session.getAttribute("user"); th:text="#{access.den.back" )%
-       if (session == null || u == null) {%>
-                    <%="/login"%>
-               <% } else {
-                    if (u.getRole() == Role.ADMIN) {%>
-                        <%="/admin"%>
-                    <% } else if (u.getRole() == Role.USER) {%>
-                        <%="/new-request"%>
-                    <%}
-                  } %>
-    >></a>
 </body>
 </html>

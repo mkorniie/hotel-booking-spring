@@ -17,7 +17,6 @@ import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
-import ua.mkorniie.model.util.StringConverter;
 import ua.mkorniie.model.util.directions.Pathes;
 
 import javax.servlet.http.HttpSession;

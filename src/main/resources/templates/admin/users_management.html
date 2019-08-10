@@ -46,7 +46,7 @@
         <td th:text="${u.getEmail()}"></td>
         <td th:text="${u.getLanguage()}"%></td>
 
-        <td><a th:href="'/admin-users?method=remove&id=' + ${u.getId()}" th:text="#{u.del}">Remove</a></td>
+        <td><a th:href="'/admin/users?method=remove&id=' + ${u.getId()}" th:text="#{u.del}">Remove</a></td>
         <td>
             <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).USER}" th:href="'/admin/users?method=priviledge_a&id=' + ${u.getId()}" th:text="#{u.to.a}">To Admin</a>
             <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).ADMIN}" th:href="'/admin/users?method=priviledge_u&id='+ ${u.getId()}" th:text="#{u.to.u}">To User</a>
@@ -69,7 +69,7 @@
 </nav>
 <br>
 <div class="m-4"><h3 th:text="#{u.add}">Add user</h3></div>
-<form action="/admin-users-update" method="post" class="m-4">
+<form action="#" th:action="@{/admin/users-update}" method="post" class="m-4">
     <div class="form-row">
         <div class="form-group col-2">
             <label for="name" th:text="#{u.u.name}">User name</label>
