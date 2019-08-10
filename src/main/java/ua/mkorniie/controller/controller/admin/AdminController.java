@@ -167,22 +167,31 @@ public class AdminController {
     public String userUpdatePost(Model model, @RequestParam(name = "name") String name,
                                @RequestParam(name = "mail") String email,
                                @RequestParam(name="pass") String pass,
-                                 @RequestParam(name="role") String role,
-                                 @RequestParam(name="lang") String language) {
+                                 @RequestParam(name="role") Role role,
+                                 @RequestParam(name="lang") Language language) {
         try {
-            User newUser = new User.Builder()
+            userDAO.save( new User.Builder()
                     .withName(name)
-                    .withRole(Role.valueOf(role))
+                    .withRole(role)
                     .withPasswordEncoded(encoder.encode(pass))
                     .withEmail(email)
-                    .withLanguage(Language.valueOf(language))
-                    .build();
-            userDAO.save(newUser);
+                    .withLanguage(language)
+                    .build());
         } catch (Exception e) {
             log.error("Impossible to create User at admin/users: " +
                     e.getMessage());
         }
         return getUsers(model, null, null);
+    }
+
+    @PostMapping("/admin/update-rooms")
+    public String tablesAddRoom(Model model,
+                                @RequestParam("picture") String pictureURL,
+                                @RequestParam("places") Integer places,
+                                @RequestParam("roomClass") RoomClass roomClass,
+                                @RequestParam("price") Double price) {
+        roomDAO.save(new Room(places, roomClass, pictureURL, price));
+        return getTables(model);
     }
 }
 
