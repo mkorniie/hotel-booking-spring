@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`requests` (
                                                          `class` VARCHAR(100) NOT NULL,
                                                          `start_date` DATE NOT NULL,
                                                          `end_date` DATE NOT NULL,
-                                                         `isApproved` TINYINT NOT NULL,
+                                                         `is_approved` TINYINT NOT NULL,
                                                          PRIMARY KEY (`id`),
                                                          UNIQUE INDEX `idrequests_UNIQUE` (`id` ASC) VISIBLE,
                                                          INDEX `fk_requests_users2_idx` (`users_id` ASC) VISIBLE,

@@ -33,9 +33,9 @@ public class Request {
     @Enumerated(EnumType.ORDINAL)
     @Getter          @Basic(optional = false) private RoomClass           roomClass;
 
-    @Column(columnDefinition="VARCHAR(50)")
+    @Column(columnDefinition="VARCHAR(30)")
     @Getter          @Basic(optional = false) private String                startDate;
-    @Column(columnDefinition="VARCHAR(50)")
+    @Column(columnDefinition="VARCHAR(30)")
     @Getter          @Basic(optional = false) private String                endDate;
     @Getter @Setter  @Basic(optional = false) private boolean isApproved;
 
