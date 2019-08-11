@@ -48,19 +48,33 @@ public class UserController {
 
     @GetMapping("/user/my-bills")
     public String getBills(@RequestParam(value = "method", required = false) String method,
-                           @RequestParam(value = "req_id", required = false) String id,
+                           @RequestParam(value = "req_id", required = false) String requestId,
+                           @RequestParam(value = "id", required = false) String billId,
                            Model model) {
-        if (method != null && id != null) {
+        if (method != null && requestId != null) {
             if (method.equals("cancel")) {
-                log.info("Attempting to delete Bill with id=" + id + " and corresponding Request");
+                log.info("Attempting to delete Bill with id=" + requestId + " and corresponding Request");
                 try {
-                    Bill bill = billDAO.findById(Long.parseLong(id)).get();
+                    Bill bill = billDAO.findById(Long.parseLong(requestId)).get();
                     Request request = bill.getRequest();
                     billDAO.delete(bill);
                     requestDAO.delete(request);
                     log.info("Success");
                 } catch (Exception e) {
-                    log.error("Failure: Bill with id=" + id + " hasn't been deleted");
+                    log.error("Failure: Bill with id=" + requestId + " hasn't been deleted");
+                }
+            }
+        }
+        if (method != null && billId != null) {
+            if (method.equals("pay")) {
+                log.info("Attempting to pay Bill with id=" + billId);
+                try {
+                    Bill bill = billDAO.findById(Long.parseLong(billId)).get();
+                    bill.setPaid(true);
+                    billDAO.save(bill);
+                    log.info("Success");
+                } catch (Exception e) {
+                    log.error("Failure: Bill with id=" + billId + " hasn't been paid");
                 }
             }
         }
