@@ -51,7 +51,7 @@
             </td>
             <td>
                 <a th:if="${!b.isPaid()}" th:href="@{'/user/my-bills?method=pay&id=' + ${b.getId()}}" th:text="#{user.req.table.pay}"></a>
-                <p th:if="${!b.isPaid()}" th:text="#{user.req.paid}"></p>
+                <p th:if="${b.isPaid()}" th:text="#{user.req.paid}"></p>
             </td>
         </tr>
     </tbody>
