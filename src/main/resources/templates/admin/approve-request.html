@@ -69,7 +69,7 @@
 </form>
 
 <a th:href="'/admin/?method=cancel&id=' + ${selected_request.getId()}">
-    <button class="btn btn-danger" th:text="#{cancel.btn}" >Cancel</button>
+    <button style="margin-left: 10px" class="btn btn-warning" th:text="#{cancel.btn}" >Cancel</button>
 </a>
 
 <br>
@@ -109,7 +109,7 @@
     </ul>
 </nav>
 <div class="m-4">
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>
+<!--    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>-->
 </div>
 
 
