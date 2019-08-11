@@ -39,13 +39,15 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="b : *{entries}">
+        <tr th:each="b : *{entries}" th:classappend="${b.isPaid()} ? bg-success : bg-white ">
             <th scope="row" th:text="${b.getId()}"></th>
             <td th:text="${b.getSum()}"></td>
             <td th:text="${b.getRequest().getId()}"></td>
             <td th:text="${b.getRoom().getId()}"></td>
             <td th:text="${b.isPaid()}"></td>
-            <td th:if="${!b.isPaid()}"><a th:href="@{'/user/my-bills?method=pay&id=' + ${b.getId()}}" th:text="#{user.req.table.pay}"></a></td>
+            <td>
+                <a th:if="${!b.isPaid()}" th:href="@{'/user/my-bills?method=pay&id=' + ${b.getId()}}" th:text="#{user.req.table.pay}"></a>
+            </td>
         </tr>
     </tbody>
 </table>
