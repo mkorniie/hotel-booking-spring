@@ -102,7 +102,7 @@ public class MainController {
             if (u == null) {
                 return GENERAL_ERROR.getCropURL();
             }
-            else if (encoder.matches(password, u.getPasswordEncoded())) {
+            else if (encoder.matches(password, u.getPassEncoded())) {
 
                 ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
                 HttpSession session = attr.getRequest().getSession(true);

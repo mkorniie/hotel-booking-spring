@@ -9,18 +9,12 @@ import ua.mkorniie.model.exceptions.NotEnoughDataException;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.Set;
-
-import static javax.persistence.FetchType.EAGER;
 
 /**
  * Simple Java Bean object that represents site user
  */
 
-//$2a$10$m4iDyYtrNaq5FKsymaCw/OnrTyM1.ydJU3j/J6xmAZoDoc.I/LEhC
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -39,7 +33,8 @@ public class User implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Getter         @Basic(optional = false)    private Role           role;
-    @Getter         @Basic(optional = false)    private String         passwordEncoded;
+
+    @Getter         @Basic(optional = false)    private String         passEncoded;
     @Getter         @Basic(optional = false)    private String         email;
     @Enumerated(EnumType.ORDINAL)
     @Getter         @Basic(optional = false)    private Language       language;
@@ -50,7 +45,7 @@ public class User implements Serializable {
     public User(@NotNull String name, @NotNull Role role, @NotNull String passwordEncoded, @NotNull String email, @NotNull Language language) {
         setName(name);
         setRole(role);
-        setPasswordEncoded(passwordEncoded);
+        setPassEncoded(passwordEncoded);
         setEmail(email);
         setLanguage(language);
 
@@ -61,8 +56,8 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public void setPasswordEncoded(@NotNull String passwordEncoded) {
-        this.passwordEncoded = passwordEncoded;
+    public void setPassEncoded(@NotNull String passwordEncoded) {
+        this.passEncoded = passwordEncoded;
     }
 
     public void setEmail(@NotNull String email) {
@@ -105,7 +100,7 @@ public class User implements Serializable {
         }
 
         public Builder withPasswordEncoded(@NotNull String pass) {
-            u.passwordEncoded = pass;
+            u.passEncoded = pass;
 
             return this;
         }
@@ -124,7 +119,7 @@ public class User implements Serializable {
 
         public User build() throws NotEnoughDataException {
             if (u.name == null || u.role == null ||
-            u.passwordEncoded == null || u.email == null || u.language == null) {
+            u.passEncoded == null || u.email == null || u.language == null) {
                 throw new NotEnoughDataException("Not enough data to build object User : " + u);
             }
             return u;
@@ -140,14 +135,14 @@ public class User implements Serializable {
         return id.equals(user.id) &&
                 name.equals(user.name) &&
                 role == user.role &&
-                passwordEncoded.equals(user.passwordEncoded) &&
+                passEncoded.equals(user.passEncoded) &&
                 email.equals(user.email) &&
                 language == user.language;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, role, passwordEncoded, email, language);
+        return Objects.hash(id, name, role, passEncoded, email, language);
     }
 }
 
