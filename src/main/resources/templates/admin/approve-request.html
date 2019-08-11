@@ -66,10 +66,11 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary" th:text="#{approve.btn}" >Approve</button>
-    <a th:href="'/admin/?method=cancel&id=' + ${selected_request.getId()}">
-        <button class="btn btn-danger" th:text="#{cancel.btn}" >Cancel</button>
-    </a>
 </form>
+
+<a th:href="'/admin/?method=cancel&id=' + ${selected_request.getId()}">
+    <button class="btn btn-danger" th:text="#{cancel.btn}" >Cancel</button>
+</a>
 
 <br>
 

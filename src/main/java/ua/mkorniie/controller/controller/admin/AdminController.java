@@ -78,7 +78,8 @@ public class AdminController {
                     Optional<Request> selectedRequestOptional = requestDAO.findById(Long.valueOf(id));
                     if (selectedRequestOptional.isPresent()) {
                         Request selected = selectedRequestOptional.get();
-                        requestDAO.delete(selected);
+                        selected.setStatus(Status.cancelled);
+                        requestDAO.save(selected);
                     }
                 } catch (NumberFormatException e) {
                 }
@@ -88,7 +89,7 @@ public class AdminController {
 
 
         model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll()).stream()
-                                                        .filter(r -> r.getStatus() != Status.approved)
+                                                        .filter(r -> r.getStatus() == Status.waitingForApproval)
                                                         .collect(Collectors.toList()));
 //        model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll());
         return ADMIN_MAIN_PAGE.getCropURL();
