@@ -47,14 +47,28 @@
         <td th:text="${r.getPlaces()}"></td>
         <td th:text="${r.getStartDate()}"></td>
         <td th:text="${r.getEndDate()}"></td>
-        <td th:text="${r.isApproved()}"%></td>
+        <!--    STATUS    -->
+            <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).approved}"%>
+                <p th:text="#{enum.approved}"></p>
+            </td>
+            <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).waitingForApproval}"%>
+                <p th:text="#{enum.waiting.for.approve}"></p>
+            </td>
+            <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).cancelled}"%>
+                <p th:text="#{user.req.table.cancelled}"></p>
+            </td>
+        <!--    CANCEL    -->
         <td>
-            <a th:href="@{'/user/my-requests?method=cancel&req_id=' + ${r.getId()}}" th:text="#{user.req.table.cncl}"></a></td>
-        <td th:if="${r.isApproved()}">
+            <a th:href="@{'/user/my-requests?method=cancel&req_id=' + ${r.getId()}}" th:text="#{user.req.table.cncl}"></a>
+        </td>
+        <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).approved}">
             <a th:href="@{'/user/my-bills'}"  th:text="#{user.req.table.pay}"></a>
         </td>
-        <td th:if="${!r.isApproved()}">
+        <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).waitingForApproval}">
             <p th:text="#{user.req.table.cantpay}"></p>
+        </td>
+        <td th:if="${r.getStatus() == T(ua.mkorniie.model.enums.Status).cancelled}">
+            <p th:text="#{user.req.table.cancelled}"></p>
         </td>
     </tr>
     </tbody>

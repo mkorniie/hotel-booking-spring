@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`requests` (
                                                          `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                          `user_id` BIGINT NOT NULL,
                                                          `places` INT NOT NULL,
-                                                         `class` VARCHAR(100) NOT NULL,
+                                                         `room_class` INT NOT NULL,
                                                          `start_date` VARCHAR(30) NOT NULL,
                                                          `end_date` VARCHAR(30) NOT NULL,
-                                                         `is_approved` TINYINT NOT NULL,
+                                                         `status` INT NOT NULL,
                                                          PRIMARY KEY (`id`),
                                                          UNIQUE INDEX `idrequests_UNIQUE` (`id` ASC) VISIBLE,
                                                          INDEX `fk_requests_users2_idx` (`user_id` ASC) VISIBLE,
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`requests` (
 CREATE TABLE IF NOT EXISTS `hotel_spring`.`rooms` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `places` INT NOT NULL,
-                                                      `class` VARCHAR(45) NOT NULL,
-                                                      `picURL` VARCHAR(200) NOT NULL,
+                                                      `room_class` INT NOT NULL,
+                                                      `pic_url` VARCHAR(200) NOT NULL,
                                                       `price` DECIMAL(13,2) NOT NULL,
                                                       PRIMARY KEY (`id`),
                                                       UNIQUE INDEX `idrooms_UNIQUE` (`id` ASC) VISIBLE)
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`rooms` (
 CREATE TABLE IF NOT EXISTS `hotel_spring`.`bills` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `sum` DECIMAL(13,2) NOT NULL,
-                                                      `isPaid` TINYINT NOT NULL,
+                                                      `is_paid` BIT(1) NOT NULL,
                                                       `request_id` BIGINT NOT NULL,
                                                       `room_id` BIGINT NOT NULL,
                                                       PRIMARY KEY (`id`),

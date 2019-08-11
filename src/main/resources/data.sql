@@ -38,17 +38,17 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`users` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `hotel_spring`.`requests` (
                                                          `id` BIGINT NOT NULL AUTO_INCREMENT,
-                                                         `users_id` BIGINT NOT NULL,
+                                                         `user_id` BIGINT NOT NULL,
                                                          `places` INT NOT NULL,
-                                                         `class` VARCHAR(100) NOT NULL,
-                                                         `start_date` DATE NOT NULL,
-                                                         `end_date` DATE NOT NULL,
-                                                         `is_approved` TINYINT NOT NULL,
+                                                         `room_class` INT NOT NULL,
+                                                         `start_date` VARCHAR(30) NOT NULL,
+                                                         `end_date` VARCHAR(30) NOT NULL,
+                                                         `status` INT NOT NULL,
                                                          PRIMARY KEY (`id`),
                                                          UNIQUE INDEX `idrequests_UNIQUE` (`id` ASC) VISIBLE,
-                                                         INDEX `fk_requests_users2_idx` (`users_id` ASC) VISIBLE,
+                                                         INDEX `fk_requests_users2_idx` (`user_id` ASC) VISIBLE,
                                                          CONSTRAINT `fk_requests_users2`
-                                                             FOREIGN KEY (`users_id`)
+                                                             FOREIGN KEY (`user_id`)
                                                                  REFERENCES `hotel_spring`.`users` (`id`)
                                                                  ON DELETE NO ACTION
                                                                  ON UPDATE NO ACTION)
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`requests` (
 CREATE TABLE IF NOT EXISTS `hotel_spring`.`rooms` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `places` INT NOT NULL,
-                                                      `class` VARCHAR(45) NOT NULL,
-                                                      `picURL` VARCHAR(200) NOT NULL,
+                                                      `room_class` INT NOT NULL,
+                                                      `pic_url` VARCHAR(200) NOT NULL,
                                                       `price` DECIMAL(13,2) NOT NULL,
                                                       PRIMARY KEY (`id`),
                                                       UNIQUE INDEX `idrooms_UNIQUE` (`id` ASC) VISIBLE)
@@ -75,21 +75,21 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`rooms` (
 CREATE TABLE IF NOT EXISTS `hotel_spring`.`bills` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `sum` DECIMAL(13,2) NOT NULL,
-                                                      `isPaid` TINYINT NOT NULL,
-                                                      `requests_id` BIGINT NOT NULL,
-                                                      `rooms_id` BIGINT NOT NULL,
+                                                      `is_paid` BIT(1) NOT NULL,
+                                                      `request_id` BIGINT NOT NULL,
+                                                      `room_id` BIGINT NOT NULL,
                                                       PRIMARY KEY (`id`),
                                                       UNIQUE INDEX `idbills_UNIQUE` (`id` ASC) VISIBLE,
-                                                      INDEX `fk_bills_requests1_idx` (`requests_id` ASC) VISIBLE,
-                                                      UNIQUE INDEX `requests_id_UNIQUE` (`requests_id` ASC) VISIBLE,
-                                                      INDEX `fk_bills_rooms2_idx` (`rooms_id` ASC) VISIBLE,
+                                                      INDEX `fk_bills_requests1_idx` (`request_id` ASC) VISIBLE,
+                                                      UNIQUE INDEX `requests_id_UNIQUE` (`request_id` ASC) VISIBLE,
+                                                      INDEX `fk_bills_rooms2_idx` (`room_id` ASC) VISIBLE,
                                                       CONSTRAINT `fk_bills_requests1`
-                                                          FOREIGN KEY (`requests_id`)
+                                                          FOREIGN KEY (`request_id`)
                                                               REFERENCES `hotel_spring`.`requests` (`id`)
                                                               ON DELETE NO ACTION
                                                               ON UPDATE NO ACTION,
                                                       CONSTRAINT `fk_bills_rooms2`
-                                                          FOREIGN KEY (`rooms_id`)
+                                                          FOREIGN KEY (`room_id`)
                                                               REFERENCES `hotel_spring`.`rooms` (`id`)
                                                               ON DELETE NO ACTION
                                                               ON UPDATE NO ACTION)
@@ -99,3 +99,6 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`bills` (
 # SET SQL_MODE=@OLD_SQL_MODE;
 # SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 # SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+CREATE USER IF NOT EXISTS 'newuser'@'localhost' IDENTIFIED BY '12345';
+GRANT ALL ON `hotel_spring`.* TO 'newuser'@'localhost';

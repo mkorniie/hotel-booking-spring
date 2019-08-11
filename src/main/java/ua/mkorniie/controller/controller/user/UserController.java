@@ -9,6 +9,7 @@ import ua.mkorniie.controller.dao.BillRepository;
 import ua.mkorniie.controller.dao.RequestRepository;
 import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.enums.Status;
 import ua.mkorniie.model.exceptions.DateFormatException;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
@@ -107,11 +108,11 @@ public class UserController {
             log.info("Dates: " + dates);
 
             //TODO: change to current user!!
-            Request newRequest = new Request(userDAO.findById(1L).get(),
+            Request newRequest = new Request(userDAO.findById(2L).get(),
                     places,
                     roomClass,
                     dates.get(0), dates.get(1),
-                    false);
+                    Status.waitingForApproval);
             requestDAO.save(newRequest);
         } catch (Exception e) {
             log.error("Impossible to create request object: wrong input format;");

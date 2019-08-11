@@ -33,7 +33,7 @@ public class Bill implements Serializable {
 	@Getter 		private double				sum;
 	@Getter @Setter private boolean             isPaid;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "request_id", referencedColumnName = "id")
 	@Getter 		private Request				request;
 

@@ -62,9 +62,9 @@ public class MainController {
 
     //TODO: don't forget to add full commit info
     @PostMapping("/register")
-    public String registerPost(@RequestParam(name = "name", required=true) String name,
-                               @RequestParam(name = "email", required=true) String email,
-                               @RequestParam(name="password", required=true) String pass) {
+    public String registerPost(@RequestParam(name = "name") String name,
+                               @RequestParam(name = "email") String email,
+                               @RequestParam(name="password") String pass) {
         Locale locale = LocaleContextHolder.getLocale();
 
         User newUser = null;

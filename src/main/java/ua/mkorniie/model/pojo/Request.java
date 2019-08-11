@@ -3,6 +3,7 @@ package ua.mkorniie.model.pojo;
 import lombok.*;
 import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.enums.Status;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -37,16 +38,18 @@ public class Request {
     @Getter          @Basic(optional = false) private String                startDate;
     @Column(columnDefinition="VARCHAR(30)")
     @Getter          @Basic(optional = false) private String                endDate;
-    @Getter @Setter  @Basic(optional = false) private boolean isApproved;
 
+    @Enumerated(EnumType.ORDINAL)
+    @Getter @Setter  @Basic(optional = false) private Status status;
 
-    public Request(User user, int places, RoomClass roomClass, String startDate, String endDate, boolean isApproved) {
+//Add not Null
+    public Request(User user, int places, RoomClass roomClass, String startDate, String endDate, Status status) {
         setUser(user);
         this.places = places;
         setRoomClass(roomClass);
         setStartDate(startDate);
         setEndDate(endDate);
-        this.isApproved = isApproved;
+        this.status = status;
 
         logger.info("Object Request successfully created");
     }
@@ -94,7 +97,7 @@ public class Request {
         Request request = (Request) o;
         return id == request.id &&
                 places == request.places &&
-                isApproved == request.isApproved &&
+                status == request.status &&
                 user.equals(request.user) &&
                 startDate.equals(request.startDate) &&
                 endDate.equals(request.endDate);
@@ -102,6 +105,6 @@ public class Request {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, user, places, startDate, endDate, isApproved);
+        return Objects.hash(id, user, places, startDate, endDate, status);
     }
 }

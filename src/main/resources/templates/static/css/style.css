@@ -1,8 +1,9 @@
-/* BASIC */
-
 html {
     background-color: #56baed;
 }
+/* BASIC */
+
+p, span { display: inline; }
 
 body {
     font-family: "Poppins", sans-serif;

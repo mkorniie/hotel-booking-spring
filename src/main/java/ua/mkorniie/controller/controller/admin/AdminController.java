@@ -16,6 +16,7 @@ import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.enums.Status;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.Room;
@@ -23,6 +24,8 @@ import ua.mkorniie.model.pojo.User;
 
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -60,21 +63,34 @@ public class AdminController {
                           @RequestParam(name ="method", required = false) String method,
                           @RequestParam(name = "id", required = false) String id) {
 
-        if(method != null && id != null && method.equals("approve")) {
-            try {
-                Optional<Request> selectedRequestOptional = requestDAO.findById(Long.valueOf(id));
-                if (selectedRequestOptional.isPresent()) {
-                    Request selected = selectedRequestOptional.get();
-                    return showApprove(model, selected);
+        if(method != null && id != null) {
+            if (method.equals("approve")) {
+                try {
+                    Optional<Request> selectedRequestOptional = requestDAO.findById(Long.valueOf(id));
+                    if (selectedRequestOptional.isPresent()) {
+                        Request selected = selectedRequestOptional.get();
+                        return showApprove(model, selected);
+                    }
+                } catch (NumberFormatException e) {
                 }
-            } catch (NumberFormatException e) {
+            } else if (method.equals("cancel")) {
+                try {
+                    Optional<Request> selectedRequestOptional = requestDAO.findById(Long.valueOf(id));
+                    if (selectedRequestOptional.isPresent()) {
+                        Request selected = selectedRequestOptional.get();
+                        requestDAO.delete(selected);
+                    }
+                } catch (NumberFormatException e) {
+                }
             }
+
         }
 
 
         model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll()).stream()
-                                                        .filter(r -> !r.isApproved())
+                                                        .filter(r -> r.getStatus() != Status.approved)
                                                         .collect(Collectors.toList()));
+//        model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll());
         return ADMIN_MAIN_PAGE.getCropURL();
     }
 
@@ -132,16 +148,20 @@ public class AdminController {
     }
 
     private boolean datesOverlap(@com.sun.istack.internal.NotNull Bill b, @com.sun.istack.internal.NotNull Request selected) {
-        Date selectedStart = Date.valueOf(selected.getStartDate());
-        Date selectedEnd = Date.valueOf(selected.getEndDate());
 
-        Date reqStart = Date.valueOf(b.getRequest().getStartDate());
-        Date reqEnd = Date.valueOf(b.getRequest().getEndDate());
+        SimpleDateFormat sdf1 = new SimpleDateFormat("mm/dd/yyyy");
 
-        if (selectedStart.after(reqEnd) || reqStart.after(selectedEnd)) {
-            return false;
+        try {
+            Date selectedStart = new Date(sdf1.parse(selected.getStartDate()).getTime());
+            Date selectedEnd = new Date(sdf1.parse(selected.getEndDate()).getTime());
+            Date reqStart = new Date(sdf1.parse(b.getRequest().getStartDate()).getTime());
+            Date reqEnd = new Date(sdf1.parse(b.getRequest().getEndDate()).getTime());
+
+            return !(selectedStart.after(reqEnd) || reqStart.after(selectedEnd));
+        } catch (ParseException e) {
+            log.error(e.getMessage());
         }
-        return true;
+        return false;
     }
 
     private List<Room> findMatchingRooms(@NotNull Request selected) {
@@ -212,7 +232,7 @@ public class AdminController {
             Room selectedRoom = selectedRoomOp.get();
             Request relatedRequest = relatedRequestOp.get();
 
-            relatedRequest.setApproved(true);
+            relatedRequest.setStatus(Status.approved);
             requestDAO.save(relatedRequest);
 
             Bill bill = new Bill(selectedRoom.getPrice(), false, relatedRequest, selectedRoom);

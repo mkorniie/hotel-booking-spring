@@ -49,7 +49,7 @@
             <td th:text="${r.getPlaces()}"></td>
             <td th:text="${r.getStartDate()}"></td>
             <td th:text="${r.getEndDate()}"></td>
-            <td><a th:href="@{${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()} + '?method=approve&id=' + ${r.getId()}}" th:text="#{approve.btn}">Approve</a></td>
+            <td><a th:href="@{${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()} + '?method=approve&id=' + ${r.getId()}}" th:text="#{handle.req.btn}">Approve</a></td>
         </tr>
         </tbody>
     </table>

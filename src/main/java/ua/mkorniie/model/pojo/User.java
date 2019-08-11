@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * Simple Java Bean object that represents site user
@@ -39,8 +40,8 @@ public class User implements Serializable {
     @Enumerated(EnumType.ORDINAL)
     @Getter         @Basic(optional = false)    private Language       language;
 
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//    @Getter @Setter                             private Set<Request> requests;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE)
+    @Getter @Setter                             private Set<Request> requests;
 
     public User(@NotNull String name, @NotNull Role role, @NotNull String passwordEncoded, @NotNull String email, @NotNull Language language) {
         setName(name);

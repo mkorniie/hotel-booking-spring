@@ -54,7 +54,7 @@
         </div>
         <div class="form-group col-2">
             <label for="room-select" th:text="#{approve.req.form.room.id}" >Room Id</label>
-            <select id="room-select" name="room-select">
+            <select class="browser-default custom-select" id="room-select" name="room-select">
                 <option th:each=" r : *{entries}" th:value="${r.getId()}" th:text="${r.getId()}">
                     Room Id
                 </option>
@@ -66,6 +66,9 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary" th:text="#{approve.btn}" >Approve</button>
+    <a th:href="'/admin/?method=cancel&id=' + ${selected_request.getId()}">
+        <button class="btn btn-danger" th:text="#{cancel.btn}" >Cancel</button>
+    </a>
 </form>
 
 <br>
