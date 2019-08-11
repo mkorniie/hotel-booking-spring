@@ -37,7 +37,8 @@ public class Request {
     @Getter          @Basic(optional = false) private String                startDate;
     @Column(columnDefinition="VARCHAR(50)")
     @Getter          @Basic(optional = false) private String                endDate;
-    @Getter @Setter  @Basic(optional = false) private boolean             isApproved;
+    @Getter @Setter  @Basic(optional = false) private boolean isApproved;
+
 
     public Request(User user, int places, RoomClass roomClass, String startDate, String endDate, boolean isApproved) {
         setUser(user);

@@ -30,6 +30,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
+import static ua.mkorniie.model.util.directions.Pathes.APPROVE_REQ;
 
 //TODO: make "repeat your password"?
 //TODO: add Slf4j everywhere
@@ -55,16 +56,16 @@ public class AdminController {
     }
 
     @GetMapping("/admin/")
-    public String getMain(@RequestParam(name ="method", required = false) String method,
-            @RequestParam(name = "id", required = false) String id,
-            Model model) {
+    public String getMain(Model model,
+                          @RequestParam(name ="method", required = false) String method,
+                          @RequestParam(name = "id", required = false) String id) {
 
         if(method != null && id != null && method.equals("approve")) {
             try {
                 Optional<Request> selectedRequestOptional = requestDAO.findById(Long.valueOf(id));
                 if (selectedRequestOptional.isPresent()) {
                     Request selected = selectedRequestOptional.get();
-                    showApprove(model, selected);
+                    return showApprove(model, selected);
                 }
             } catch (NumberFormatException e) {
             }
@@ -105,10 +106,9 @@ public class AdminController {
         return ADMIN_TABLES_PAGE.getCropURL();
     }
 
-//    @RequestMapping(name = "/admin/approve", method = RequestMethod.POST)
     public String showApprove(@NotNull Model model, @NotNull Request selected) {
 
-        model.addAttribute("selected-request", selected);
+        model.addAttribute("selected_request", selected);
 
         List<Room> matchingRooms = findMatchingRooms(selected);
         model.addAttribute("entries", matchingRooms);
@@ -116,7 +116,6 @@ public class AdminController {
 //        Pagination<Room> roomPagination = new Pagination();
 //        roomPagination.paginate(matchingRooms, request, response);
         return ADMIN_REQUESTAPPROVE_PAGE.getCropURL();
-//        request.getRequestDispatcher(Paths.APPROVE_ROOM_REQ.getUrl()).forward(request, response);
     }
 
     private boolean withinDateRange(@com.sun.istack.internal.NotNull Room r, @com.sun.istack.internal.NotNull Request selected) {
@@ -193,5 +192,38 @@ public class AdminController {
         roomDAO.save(new Room(places, roomClass, pictureURL, price));
         return getTables(model);
     }
+
+    //TODO: add not null annotation
+    @PostMapping("/admin/approve")
+    public String approveRequest(Model model,
+                                    @RequestParam("id") Long requestId,
+                                    @RequestParam("room-select") Long roomId ) {
+
+        Optional<Room> selectedRoomOp = Optional.empty();
+        Optional<Request> relatedRequestOp = Optional.empty();
+        try {
+            selectedRoomOp = roomDAO.findById(roomId);
+            relatedRequestOp = requestDAO.findById(requestId);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+
+        if (selectedRoomOp.isPresent() && relatedRequestOp.isPresent()) {
+            Room selectedRoom = selectedRoomOp.get();
+            Request relatedRequest = relatedRequestOp.get();
+
+            relatedRequest.setApproved(true);
+            requestDAO.save(relatedRequest);
+
+            Bill bill = new Bill(selectedRoom.getPrice(), false, relatedRequest, selectedRoom);
+            billDAO.save(bill);
+        }
+        else {
+            model.addAttribute("method", "approve");
+            model.addAttribute("id", requestId);
+        }
+        return getMain(model, null, null);
+    }
+
 }
 

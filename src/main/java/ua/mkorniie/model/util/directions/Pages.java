@@ -11,7 +11,7 @@ public enum Pages {
     GENERAL_ERROR("templates/general-error.html"),
 
     ADMIN_MAIN_PAGE("templates/admin/admin_main.html"),
-    ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.jsp"),
+    ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.html"),
     ADMIN_TABLES_PAGE("templates/admin/tables.html"),
     ADMIN_USERS_PAGE("templates/admin/users_management.jsp"),
 

@@ -13,11 +13,11 @@ public enum  Pathes {
     USER_MAIN("/user/", USER_MAIN_PAGE),
 
     LOGOUT("/logout", ADMIN_MAIN.page),
-    APPROVE_REQ("/approve", null);;
+    APPROVE_REQ("/admin/approve", null);;
 
 
-    private String url;
-    private Pages page;
+    private final String url;
+    private final Pages page;
 
     Pathes(String url, Pages page) {
         this.url = url;
@@ -26,6 +26,10 @@ public enum  Pathes {
 
     public String getUrl() {
         return url;
+    }
+
+    public char[] getConstUrl() {
+        return url.toCharArray();
     }
     public String getPage() {
         return page.getFullUrl();

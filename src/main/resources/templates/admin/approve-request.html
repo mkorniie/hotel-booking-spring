@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel = "icon" href ="https://www.pinclipart.com/picdir/big/163-1634137_brochure-markant-online-books-icons-clipart.png"
               type = "image/x-icon">
-        <link rel="stylesheet" th:href="../static/css/style.css">
+        <link rel="stylesheet" th:href="@{templates/css/style.css}">
     </head>
 </head>
 
@@ -34,27 +34,30 @@
     <div class="form-row">
         <div class="form-group col-1">
             <label for="id">#</label>
-            <input type="number" th:value="<%=req.getId()%>" class="form-control" id="id" name="id">
+            <input type="number" th:value="${selected_request.getId()}" class="form-control" id="id" name="id" th:min="${selected_request.getId()}" th:max="${selected_request.getId()}">
         </div>
         <div class="form-group col-1">
             <label for="places" th:text="#{approve.req.form.places}">Places</label>
-            <input type="number" value="<%=req.getPlaces()%>" class="form-control" id="places" name="places" disabled>
+            <input type="number" th:value="${selected_request.getPlaces()}" class="form-control" id="places" name="places" disabled>
         </div>
         <div class="form-group col-2">
             <label for="class" th:text="#{approve.req.form.class}">Class</label>
-            <input type="text" id="class" class="form-control"  value="<%=req.getRoomClass()%>" name="class" disabled>
+            <input type="text" id="class" class="form-control" th:value="${selected_request.getRoomClass()}" name="class" disabled>
         </div>
         <div class="form-group col-2">
             <label for="start-date" th:text="#{approve.req.form.start.d}">Start Date</label>
-            <input type="text" id="start-date" class="form-control"  value="<%=req.getStartDate()%>" name="start-date" disabled />
+            <input type="text" id="start-date" class="form-control" th:value="${selected_request.getStartDate()}" name="start-date" disabled />
         </div>
         <div class="form-group col-2">
             <label for="end-date" th:text="#{approve.req.form.end.d}">End Date</label>
-            <input type="text" id="end-date" class="form-control"  value="<%=req.getEndDate()%>" name="end-date" disabled />
+            <input type="text" id="end-date" class="form-control" th:value="${selected_request.getEndDate()}" name="end-date" disabled />
         </div>
         <div class="form-group col-2">
             <label for="room-select" th:text="#{approve.req.form.room.id}" >Room Id</label>
             <select id="room-select" name="room-select">
+                <option th:each=" r : *{entries}" th:value="${r.getId()}" th:text="${r.getId()}">
+                    Room Id
+                </option>
 <!--                <% List<Room> matchingRooms = (List<Room>) request.getAttribute("entries");-->
 <!--                    for (int i = 0; i < matchingRooms.size(); i++){%>-->
 <!--                        <option value="<%=matchingRooms.get(i).getId()%>"><%=matchingRooms.get(i).getId()%></option>-->
@@ -85,7 +88,6 @@
                 <td th:text="${r.getPlaces()}"> Places </td>
                 <td th:text="${r.getRoomClass().name()}"> Room Class </td>
                 <td th:text="${r.getPrice()}"> Price </td>
-                <td th:text="${r.isOccupied()}"> Occupied </td>
         </tr>
     </tbody>
 </table>
