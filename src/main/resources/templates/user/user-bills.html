@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel = "icon" href ="https://www.pinclipart.com/picdir/big/163-1634137_brochure-markant-online-books-icons-clipart.png"
           type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
@@ -27,7 +28,7 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4" th:text="#{user.bills.table.title}"></h1>
 </div>
-<table class="table">
+<table class="table" style="text-align: center">
     <thead>
     <tr>
         <th scope="col">#</th>
@@ -39,14 +40,18 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each="b : *{entries}" th:classappend="${b.isPaid()} ? bg-success : bg-white ">
+        <tr th:each="b : *{entries}">
             <th scope="row" th:text="${b.getId()}"></th>
             <td th:text="${b.getSum()}"></td>
             <td th:text="${b.getRequest().getId()}"></td>
             <td th:text="${b.getRoom().getId()}"></td>
-            <td th:text="${b.isPaid()}"></td>
+            <td>
+                <p class="text-success" th:if="${b.isPaid()}"><i class="fas fa-check-circle"></i></p>
+                <p class="text-warning" th:if="${!b.isPaid()}"><i class="far fa-times-circle"></i></p>
+            </td>
             <td>
                 <a th:if="${!b.isPaid()}" th:href="@{'/user/my-bills?method=pay&id=' + ${b.getId()}}" th:text="#{user.req.table.pay}"></a>
+                <p th:if="${!b.isPaid()}" th:text="#{user.req.paid}"></p>
             </td>
         </tr>
     </tbody>

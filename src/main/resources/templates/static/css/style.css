@@ -306,3 +306,7 @@ input[type=text]:placeholder {
     background: #cecece;
     color: #303030;
 }
+
+table {
+    margin-top: 50px;
+}
