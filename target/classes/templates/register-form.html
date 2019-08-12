@@ -8,6 +8,8 @@
 	<title th:text="#{register.title}"></title>
 </head>
 <body>
+<div style="color: grey;" class="alert alert-danger" th:if = "${error}" th:text="#{login.or.pass.wrong}">
+</div>
 <div>
 	<div class="p-2">
 		<a href="/register?lang=ua"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
@@ -44,11 +46,14 @@
 							<button type="submit" class="btn btn-primary btn-block" th:text="#{register.link.text}"></button>
 						</div>
 						<small class="text-muted" th:text="#{register.marked.red}"><span class="text-danger">*</span>
-                            <br><br th:text="#{register.descl}">
-                            <br th:text="#{register.descl}"></small>
+                            <br><br th:text="#{register.descl.1}">
+                            <br th:text="#{register.descl.2}"></small>
 					</form>
 				</article>
-				<div class="border-top card-body text-center" th:text="#{register.have.acc}"><a href="/login" th:text="#{register.login}"></a></div>
+				<div class="border-top card-body text-center">
+					<p th:text="#{register.have.acc}"></p>
+					<a href="/login" th:text="#{register.login}"></a>
+				</div>
 			</div>
 		</div>
 	</div>
