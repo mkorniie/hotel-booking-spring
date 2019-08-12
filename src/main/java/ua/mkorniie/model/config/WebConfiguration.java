@@ -2,6 +2,7 @@ package ua.mkorniie.model.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -12,7 +13,9 @@ import org.springframework.web.servlet.view.JstlView;
 import java.util.Locale;
 
 @Configuration
-public class WebConfiguration extends WebMvcConfigurationSupport {
+@EnableWebMvc
+@EnableSpringDataWebSupport
+public class WebConfiguration implements WebMvcConfigurer {
 
 //    @Override
 //    public void configureViewResolvers(ViewResolverRegistry registry) {

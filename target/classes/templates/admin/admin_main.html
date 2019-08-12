@@ -43,29 +43,26 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="r : *{entries}">
+        <tr th:each="r : *{page.getContent()}">
             <th scope="row" th:text="${r.getId()}"></th>
             <td th:text="${r.getUser().getName()}"></td>
             <td th:text="${r.getPlaces()}"></td>
             <td th:text="${r.getStartDate()}"></td>
             <td th:text="${r.getEndDate()}"></td>
-            <td><a th:href="@{${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()} + '?method=approve&id=' + ${r.getId()}}" th:text="#{handle.req.btn}">Approve</a></td>
+            <td>
+                <a th:href="@{${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()} + '?method=approve&id=' + ${r.getId()}}" th:if="${r.getStatus().name().equals('waitingForApproval')}" th:text="#{handle.req.btn}">Approve</a>
+                <p th:if="${!r.getStatus().name().equals('waitingForApproval')}" th:text="${r.getStatus().name()}">Approve</p>
+            </td>
         </tr>
         </tbody>
     </table>
-    <nav aria-label="my-nav">
-        <ul class="pagination">
-<!--            <%      Integer pageCount = (Integer) request.getAttribute("page-count-requests");-->
-<!--                Integer active = (Integer) request.getAttribute("active-page-requests");-->
-<!--                for(int i  = 1; i <= pageCount; i++) {-->
-<!--                    if (i == active) {%>-->
-<!--                    <li class="page-item active"><a class="page-link" href="/admin?page=<%=i%>"><%=i%></a></li>-->
-<!--                    <%} else {%>-->
-<!--                    <li class="page-item"><a class="page-link" href="/admin?page=<%=i%>"><%=i%></a></li>-->
-<!--                    <%}-->
-<!--            }%>-->
-        </ul>
-    </nav>
+        <nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
+            <ul class="pagination">
+                <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
+                    <a class="page-link" th:href="'/admin/?page=' + ${i}" th:text="${i + 1}"> Page number</a>
+                </li>
+            </ul>
+        </nav>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

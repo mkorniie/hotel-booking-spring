@@ -2,13 +2,14 @@ package ua.mkorniie.controller.controller.admin;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ua.mkorniie.controller.dao.BillRepository;
 import ua.mkorniie.controller.dao.RequestRepository;
 import ua.mkorniie.controller.dao.RoomRepository;
@@ -30,10 +31,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
-import static ua.mkorniie.model.util.directions.Pathes.APPROVE_REQ;
 
 //TODO: make "repeat your password"?
 //TODO: add Slf4j everywhere
@@ -60,9 +59,9 @@ public class AdminController {
 
     @GetMapping("/admin/")
     public String getMain(Model model,
-                          @RequestParam(name ="method", required = false) String method,
-                          @RequestParam(name = "id", required = false) String id) {
-
+                            @RequestParam(name ="method", required = false) String method,
+                            @RequestParam(name = "id", required = false) String id,
+                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         if(method != null && id != null) {
             if (method.equals("approve")) {
                 try {
@@ -87,18 +86,17 @@ public class AdminController {
 
         }
 
-
-        model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll()).stream()
-                                                        .filter(r -> r.getStatus() == Status.waitingForApproval)
-                                                        .collect(Collectors.toList()));
-//        model.addAttribute("entries", Lists.newArrayList(requestDAO.findAll());
+        Page<Request> page = requestDAO.findAll(pageable);
+        model.addAttribute("page", page);
+//        model.addAttribute("page", Lists.newArrayList(requestDAO.findAll());
         return ADMIN_MAIN_PAGE.getCropURL();
     }
 
     @GetMapping("/admin/users")
     public String getUsers(Model model,
                            @RequestParam(name = "method", required = false) String method,
-                           @RequestParam(name = "id", required = false) Long id) {
+                           @RequestParam(name = "id", required = false) Long id,
+                           @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable ) {
         if(method != null && id != null) {
             if (method.equals("remove"))
                 userDAO.deleteById(id);
@@ -117,7 +115,8 @@ public class AdminController {
     }
 
     @GetMapping("/admin/tables")
-    public String getTables(Model model) {
+    public String getTables(Model model,
+                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         model.addAttribute("entries_bills", billDAO.findAll());
         model.addAttribute("entries_rooms", roomDAO.findAll());
         return ADMIN_TABLES_PAGE.getCropURL();
@@ -188,7 +187,8 @@ public class AdminController {
                                @RequestParam(name = "mail") String email,
                                @RequestParam(name="pass") String pass,
                                  @RequestParam(name="role") Role role,
-                                 @RequestParam(name="lang") Language language) {
+                                 @RequestParam(name="lang") Language language,
+                                 @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         try {
             userDAO.save( new User.Builder()
                     .withName(name)
@@ -201,7 +201,7 @@ public class AdminController {
             log.error("Impossible to create User at admin/users: " +
                     e.getMessage());
         }
-        return getUsers(model, null, null);
+        return getUsers(model, null, null, pageable);
     }
 
     @PostMapping("/admin/update-rooms")
@@ -209,16 +209,18 @@ public class AdminController {
                                 @RequestParam("picture") String pictureURL,
                                 @RequestParam("places") Integer places,
                                 @RequestParam("roomClass") RoomClass roomClass,
-                                @RequestParam("price") Double price) {
+                                @RequestParam("price") Double price,
+                                @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         roomDAO.save(new Room(places, roomClass, pictureURL, price));
-        return getTables(model);
+        return getTables(model, pageable);
     }
 
     //TODO: add not null annotation
     @PostMapping("/admin/approve")
     public String approveRequest(Model model,
                                     @RequestParam("id") Long requestId,
-                                    @RequestParam("room-select") Long roomId ) {
+                                    @RequestParam("room-select") Long roomId,
+                                    @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
 
         Optional<Room> selectedRoomOp = Optional.empty();
         Optional<Request> relatedRequestOp = Optional.empty();
@@ -243,7 +245,7 @@ public class AdminController {
             model.addAttribute("method", "approve");
             model.addAttribute("id", requestId);
         }
-        return getMain(model, null, null);
+        return getMain(model, null, null, pageable);
     }
 
 }

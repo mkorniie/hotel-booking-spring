@@ -23,7 +23,7 @@
     <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
 </div>
 <div style="padding:2px 20px">
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=ua'"><img width="25px" src="templates/static/img/ua-01.png" alt="ua"></a>
     <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
 </div>
 <br>
@@ -58,7 +58,7 @@
                 <option th:each=" r : *{entries}" th:value="${r.getId()}" th:text="${r.getId()}">
                     Room Id
                 </option>
-<!--                <% List<Room> matchingRooms = (List<Room>) request.getAttribute("entries");-->
+<!--                <% List<Room> matchingRooms = (List<Room>) request.getAttribute("page");-->
 <!--                    for (int i = 0; i < matchingRooms.size(); i++){%>-->
 <!--                        <option value="<%=matchingRooms.get(i).getId()%>"><%=matchingRooms.get(i).getId()%></option>-->
 <!--                <%}%>-->

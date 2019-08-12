@@ -50,13 +50,13 @@ public class Pagination<T> {
         try {
             pageId = Integer.parseInt(page);
         } catch (Exception e) { }
-        request.setAttribute("entries" + tag, getEntries(allEntries, pageId));
+        request.setAttribute("page" + tag, getEntries(allEntries, pageId));
         request.setAttribute("active-page" + tag, pageId);
     }
 
     /**
      * Sets a page count and page content (retrieves page number from GET request)
-     * @param allEntries - list of all entries (from Repo)
+     * @param allEntries - list of all page (from Repo)
      * @param request - HttpServletRequest
      * @param response - HttpServletResponse
      */
@@ -69,7 +69,7 @@ public class Pagination<T> {
         try {
             pageId = Integer.parseInt(page);
         } catch (Exception e) { }
-        request.setAttribute("entries", getEntries(allEntries, pageId));
+        request.setAttribute("page", getEntries(allEntries, pageId));
         request.setAttribute("active-page", pageId);
     }
 }

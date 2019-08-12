@@ -2,6 +2,10 @@ package ua.mkorniie.controller.controller.user;
 
 import com.sun.istack.internal.NotNull;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -50,7 +54,9 @@ public class UserController {
     public String getBills(@RequestParam(value = "method", required = false) String method,
                            @RequestParam(value = "req_id", required = false) String requestId,
                            @RequestParam(value = "id", required = false) String billId,
+                           @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                            Model model) {
+
         if (method != null && requestId != null) {
             if (method.equals("cancel")) {
                 log.info("Attempting to delete Bill with id=" + requestId + " and corresponding Request");
@@ -79,7 +85,8 @@ public class UserController {
             }
         }
 
-        model.addAttribute("entries", billDAO.findAll());
+        Page<Bill> page = billDAO.findAll(pageable);
+        model.addAttribute("page", page);
         return "user/user-bills";
     }
 
@@ -95,20 +102,21 @@ public class UserController {
     @GetMapping("/user/my-requests")
     public String getRequests(@RequestParam(value = "method", required = false) String method,
                               @RequestParam(value = "req_id", required = false) String id,
+                              @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                               Model model) {
-        //TODO: remember once there is security - only entries corresponding to the user!
+        //TODO: remember once there is security - only page corresponding to the user!
 
         if (method != null && id != null) {
             if (method.equals("cancel")) {
                 cancelRequest(Integer.parseInt(id));
             }
         }
-
-        model.addAttribute("entries", requestDAO.findAll());
+        Page<Request> page = requestDAO.findAll(pageable);
+        model.addAttribute("page", page);
         return "user/user-requests";
     }
 
-    @RequestMapping(value = "/user/make-request", method = RequestMethod.POST)
+    @PostMapping("/user/make-request")
     public String makeRequest(@RequestParam("places") String pl,
                               @RequestParam("class") String clazz,
                               @RequestParam("daterange") String daterange,
