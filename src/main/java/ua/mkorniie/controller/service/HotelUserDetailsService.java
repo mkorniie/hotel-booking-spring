@@ -13,7 +13,13 @@ import ua.mkorniie.model.pojo.User;
 @ConditionalOnBean(WebSecurityConfig.class)
 @Service
 public class HotelUserDetailsService implements UserDetailsService {
-    @Autowired private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    @Autowired
+    public HotelUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {

@@ -3,6 +3,7 @@ package ua.mkorniie.controller.controller.admin;
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.IterableUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -51,6 +52,7 @@ public class AdminController {
     private List<RoomClass> classes = Arrays.asList(RoomClass.values());
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
+    @Autowired
     AdminController(RequestRepository requestDAO, BillRepository billDAO, UserRepository userDAO, RoomRepository roomDAO) {
         this.requestDAO = requestDAO;
         this.billDAO = billDAO;

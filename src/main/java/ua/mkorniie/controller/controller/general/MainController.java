@@ -50,10 +50,10 @@ public class MainController {
         return INDEX.getCropURL();
     }
 
-    @GetMapping("/error")
-    public String error() {
-        return GENERAL_ERROR.getCropURL();
-    }
+//    @GetMapping("/error")
+//    public String error() {
+//        return GENERAL_ERROR.getCropURL();
+//    }
 
     @GetMapping("/register")
     public String registerGet() {

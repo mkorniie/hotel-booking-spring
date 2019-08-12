@@ -43,11 +43,7 @@ public class UserController {
         this.userDAO = userDAO;
     }
 
-    @GetMapping("/user/")
-    public String getMain(Model model) {
-        model.addAttribute("classes", classes);
-        return "user/user-main";
-    }
+
 
 
     @GetMapping("/user/my-bills")
