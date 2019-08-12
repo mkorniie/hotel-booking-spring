@@ -1,7 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title th:text="#{a.header.tables}">Tables</title>
+    <title th:text="#{a.header.rooms}">Rooms</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel = "icon" href ="https://www.pinclipart.com/picdir/big/163-1634137_brochure-markant-online-books-icons-clipart.png"
           type = "image/x-icon">
@@ -14,50 +14,15 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{a.header.main}">Requests</a>
         <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_USERS.getUrl()}" th:text="#{a.header.users}">Users</a>
-        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_TABLES.getUrl()}" th:text="#{a.header.tables}">Tables</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_BILLS.getUrl()}" th:text="#{a.header.bills}">Bills</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_ROOMS.getUrl()}" th:text="#{a.header.rooms}">Rooms</a>
     </nav>
     <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
 </div>
 <div style="padding:2px 20px">
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_TABLES.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_TABLES.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
+    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
 </div>
-<br>
-<div class="m-4"><h2 th:text="#{user.bills.table.title}">Bills</h2></div>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col" th:text="#{user.bills.table.sum}">Sum</th>
-        <th scope="col" th:text="#{user.bills.table.req.id}">Request Id</th>
-        <th scope="col" th:text="#{user.bills.table.room.id}">Room Id</th>
-        <th scope="col" th:text="#{user.bills.table.paid}">Is Paid</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="b : *{entries_bills}">
-        <th scope="row" th:text="${b.getId()}"></th>
-        <td th:text="${b.getSum()}"></td>
-        <td th:text="${b.getRequest().getId()}"></td>
-        <td th:text="${b.getRoom().getId()}"></td>
-        <td th:text="${b.isPaid()}"></td>
-    </tr>
-    </tbody>
-</table>
-<nav aria-label="my-nav">
-    <ul class="pagination">
-<!--        <%      Integer pageCount = (Integer) request.getAttribute("page-count-bills");-->
-<!--            Integer active = (Integer) request.getAttribute("active-page-bills");-->
-<!--            for(int i  = 1; i <= pageCount; i++) {-->
-<!--                if (i == active) {%>-->
-<!--        <li class="page-item active"><a class="page-link" href="/admin-tables?table=-bills&page=<%=i%>"><%=i%></a></li>-->
-<!--        <%} else {%>-->
-<!--        <li class="page-item"><a class="page-link" href="/admin-tables?table=-bills&page=<%=i%>"><%=i%></a></li>-->
-<!--        <%}-->
-<!--        }%>-->
-    </ul>
-</nav>
-
 <br>
 <div class="m-4"><h2 th:text="#{room.title}">Rooms</h2></div>
 <table class="table">
@@ -71,7 +36,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="r : *{entries_rooms}">
+    <tr th:each="r : *{page.getContent()}">
         <th scope="row" th:text="${r.getId()}"></th>
         <td><img height="120px" th:src="${r.getPicURL()}" alt="room"></td>
         <td th:text="${r.getPlaces()}"></td>
@@ -80,17 +45,11 @@
     </tr>
     </tbody>
 </table>
-<nav aria-label="my-nav">
+<nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
     <ul class="pagination">
-<!--        <%  pageCount = (Integer) request.getAttribute("page-count-rooms");-->
-<!--            active = (Integer) request.getAttribute("active-page-rooms");-->
-<!--            for(int i  = 1; i <= pageCount; i++) {-->
-<!--                if (i == active) {%>-->
-<!--        <li class="page-item active"><a class="page-link" href="/admin-tables?table=-rooms&page=<%=i%>"><%=i%></a></li>-->
-<!--        <%} else {%>-->
-<!--        <li class="page-item"><a class="page-link" href="/admin-tables?table=-rooms&page=<%=i%>"><%=i%></a></li>-->
-<!--        <%}-->
-<!--        }%>-->
+        <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
+            <a class="page-link" th:href="'/admin/rooms?page=' + ${i}" th:text="${i + 1}"> Page number</a>
+        </li>
     </ul>
 </nav>
 <br>

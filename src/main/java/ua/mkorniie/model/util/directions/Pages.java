@@ -12,12 +12,13 @@ public enum Pages {
 
     ADMIN_MAIN_PAGE("templates/admin/admin_main.html"),
     ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.html"),
-    ADMIN_TABLES_PAGE("templates/admin/tables.html"),
+    ADMIN_ROOMS_PAGE("templates/admin/rooms-table.html"),
+    ADMIN_BILLS_PAGE("templates/admin/bills-table.html"),
     ADMIN_USERS_PAGE("templates/admin/users_management.jsp"),
 
     USER_MAIN_PAGE("templates/user/user-main.html");
 //    ADMIN_REQUESTAPPROVE_PAGE("templates/user/approve-request.jsp"),
-//    ADMIN_TABLES_PAGE("templates/user/tables.html"),
+//    ADMIN_TABLES_PAGE("templates/user/rooms-table.html"),
 //    ADMIN_USERS_PAGE("templates/user/users_management.jsp");
 
     private String url;

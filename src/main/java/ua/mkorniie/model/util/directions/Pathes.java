@@ -9,7 +9,8 @@ public enum  Pathes {
     ADMIN_MAIN("/admin/", ADMIN_MAIN_PAGE),
     ADMIN_APPROVE("/admin/approve", ADMIN_REQUESTAPPROVE_PAGE),
     ADMIN_USERS("/admin/users", ADMIN_USERS_PAGE),
-    ADMIN_TABLES("/admin/tables", ADMIN_TABLES_PAGE),
+    ADMIN_BILLS("/admin/bills", ADMIN_BILLS_PAGE),
+    ADMIN_ROOMS("/admin/rooms", ADMIN_ROOMS_PAGE),
     USER_MAIN("/user/", USER_MAIN_PAGE),
 
     LOGOUT("/logout", ADMIN_MAIN.page),

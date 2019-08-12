@@ -113,12 +113,18 @@ public class AdminController {
         return ADMIN_USERS_PAGE.getCropURL();
     }
 
-    @GetMapping("/admin/tables")
-    public String getTables(Model model,
+    @GetMapping("/admin/bills")
+    public String getTBills(Model model,
                             @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
-        model.addAttribute("entries_bills", billDAO.findAll());
-        model.addAttribute("entries_rooms", roomDAO.findAll());
-        return ADMIN_TABLES_PAGE.getCropURL();
+        model.addAttribute("page", billDAO.findAll(pageable));
+        return ADMIN_BILLS_PAGE.getCropURL();
+    }
+
+    @GetMapping("/admin/rooms")
+    public String getRooms(Model model,
+                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+        model.addAttribute("page", roomDAO.findAll(pageable));
+        return ADMIN_ROOMS_PAGE.getCropURL();
     }
 
     public String showApprove(@NotNull Model model, @NotNull Request selected) {
@@ -211,7 +217,7 @@ public class AdminController {
                                 @RequestParam("price") Double price,
                                 @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         roomDAO.save(new Room(places, roomClass, pictureURL, price));
-        return getTables(model, pageable);
+        return getRooms(model, pageable);
     }
 
     //TODO: add not null annotation
