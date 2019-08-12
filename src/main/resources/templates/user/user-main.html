@@ -44,7 +44,6 @@
             <div class="form-group col-3">
                 <label for="class" th:text="#{user.main.req.class}"></label>
                 <select class="browser-default custom-select" id="class" name="class">
-<!--                    <option th:each="roomClass : ${classes}" th:text="${roomClass}"  value="<%=c.toString()%>"> option </option>-->
                     <option th:each="roomClass : ${T(ua.mkorniie.model.enums.RoomClass).values()}" th:text="${roomClass}"> option </option>
                 </select>
             </div>

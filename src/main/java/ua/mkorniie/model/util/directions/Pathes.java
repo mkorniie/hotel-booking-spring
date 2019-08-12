@@ -29,9 +29,6 @@ public enum  Pathes {
         return url;
     }
 
-    public char[] getConstUrl() {
-        return url.toCharArray();
-    }
     public String getPage() {
         return page.getFullUrl();
     }

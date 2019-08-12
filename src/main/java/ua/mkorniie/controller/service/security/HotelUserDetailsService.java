@@ -1,4 +1,4 @@
-package ua.mkorniie.controller.service;
+package ua.mkorniie.controller.service.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
