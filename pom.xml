@@ -123,12 +123,19 @@
         </dependency>
         <!--        END: LOGS          -->
 
+        <!--        START: OTHER          -->
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>19.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
+        <!--        END: OTHER          -->
 
     </dependencies>
 

@@ -33,7 +33,6 @@ public class Room implements Serializable {
     @Enumerated(EnumType.ORDINAL)
     @Getter         @Basic(optional = false) private RoomClass           roomClass;
 
-    @Column(name = "pic_url")
     @Getter         @Basic(optional = false) private String              picURL;
 
     @Getter         @Basic(optional = false) private double              price;

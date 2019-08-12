@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`rooms` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `places` INT NOT NULL,
                                                       `room_class` INT NOT NULL,
-                                                      `pic_url` VARCHAR(200) NOT NULL,
+                                                      `picurl` VARCHAR(200) NOT NULL,
                                                       `price` DECIMAL(13,2) NOT NULL,
                                                       PRIMARY KEY (`id`),
                                                       UNIQUE INDEX `idrooms_UNIQUE` (`id` ASC) VISIBLE)

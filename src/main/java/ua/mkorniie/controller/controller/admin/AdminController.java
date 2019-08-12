@@ -2,9 +2,8 @@ package ua.mkorniie.controller.controller.admin;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import org.apache.commons.collections4.IterableUtils;
+import org.springframework.data.domain.*;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -31,6 +30,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
 
@@ -113,10 +114,29 @@ public class AdminController {
         return ADMIN_USERS_PAGE.getCropURL();
     }
 
+    public List<Bill> getSubset(Iterable<Bill> allBills, Pageable pageable) {
+        return StreamSupport.stream(allBills.spliterator(), false)
+                .skip(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .collect(Collectors.toList());
+    }
+
     @GetMapping("/admin/bills")
     public String getTBills(Model model,
                             @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
-        model.addAttribute("page", billDAO.findAll(pageable));
+        Iterable<Bill> allBills = billDAO.findAll();
+
+        model.addAttribute("total", StreamSupport.stream(allBills.spliterator(), false)
+                .filter(b -> b.isPaid())
+                .mapToDouble(b -> b.getSum())
+                .sum());
+
+        List<Bill> subset = getSubset(allBills, pageable);
+
+        model.addAttribute("page", new PageImpl<>(subset,
+                pageable,
+                IterableUtils.size(allBills)));
+
         return ADMIN_BILLS_PAGE.getCropURL();
     }
 
@@ -134,8 +154,6 @@ public class AdminController {
         List<Room> matchingRooms = findMatchingRooms(selected);
         model.addAttribute("entries", matchingRooms);
 
-//        Pagination<Room> roomPagination = new Pagination();
-//        roomPagination.paginate(matchingRooms, request, response);
         return ADMIN_REQUESTAPPROVE_PAGE.getCropURL();
     }
 
