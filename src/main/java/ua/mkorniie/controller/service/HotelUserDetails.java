@@ -27,7 +27,7 @@ public class HotelUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return user.getPassEncoded();
+        return user.getPasswordEncoded();
     }
 
     @Override

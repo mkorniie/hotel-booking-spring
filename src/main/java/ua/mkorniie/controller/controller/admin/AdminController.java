@@ -109,8 +109,7 @@ public class AdminController {
                 }
             }
         }
-
-        model.addAttribute("entries", userDAO.findAll());
+        model.addAttribute("page", userDAO.findAll(pageable));
         return ADMIN_USERS_PAGE.getCropURL();
     }
 

@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`users` (
                                                       `id` BIGINT NOT NULL AUTO_INCREMENT,
                                                       `name` CHAR(120) CHARACTER SET UTF8MB4 NOT NULL,
                                                       `role` VARCHAR(45) NOT NULL,
-                                                      `pass_encoded` VARCHAR(200) NOT NULL,
+                                                      `password_encoded` VARCHAR(200) NOT NULL,
                                                       `email` VARCHAR(100) NOT NULL,
                                                       `language` INT NOT NULL,
                                                       PRIMARY KEY (`id`),
