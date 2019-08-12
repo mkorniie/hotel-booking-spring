@@ -33,6 +33,7 @@
         <th scope="col" th:text="#{room.place}">Places</th>
         <th scope="col" th:text="#{room.room.c}">Rooms Class</th>
         <th scope="col" th:text="#{room.price}">Price</th>
+        <th scope="col" th:text="#{u.del}">Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -42,6 +43,7 @@
         <td th:text="${r.getPlaces()}"></td>
         <td th:text="${r.getRoomClass()}"></td>
         <td th:text="${r.getPrice()}"></td>
+        <td><a th:href="'/admin/rooms?method=delete&id=' + ${r.getId()}"></a></td>
     </tr>
     </tbody>
 </table>

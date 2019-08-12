@@ -8,7 +8,7 @@ public enum Pages {
     LOGIN("templates/login.html"),
     REGISTER("templates/register-form.html"),
     INDEX("templates/index.html"),
-    GENERAL_ERROR("templates/general-error.html"),
+    GENERAL_ERROR("templates/error.html"),
 
     ADMIN_MAIN_PAGE("templates/admin/admin_main.html"),
     ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.html"),

@@ -142,7 +142,13 @@ public class AdminController {
 
     @GetMapping("/admin/rooms")
     public String getRooms(Model model,
+                            @RequestParam(name = "method", required = false) String method,
+                            @RequestParam(name = "id", required = false) Long id,
                             @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+        if (method != null && id != null) {
+//            if ()
+        }
+
         model.addAttribute("page", roomDAO.findAll(pageable));
         return ADMIN_ROOMS_PAGE.getCropURL();
     }
@@ -235,7 +241,7 @@ public class AdminController {
                                 @RequestParam("price") Double price,
                                 @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         roomDAO.save(new Room(places, roomClass, pictureURL, price));
-        return getRooms(model, pageable);
+        return getRooms(model, null, null, pageable);
     }
 
     //TODO: add not null annotation
