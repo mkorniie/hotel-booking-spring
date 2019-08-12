@@ -145,8 +145,11 @@ public class AdminController {
                             @RequestParam(name = "method", required = false) String method,
                             @RequestParam(name = "id", required = false) Long id,
                             @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
-        if (method != null && id != null) {
-//            if ()
+        if (method != null && id != null && method.equals("delete")) {
+            Optional<Room> room = roomDAO.findById(id);
+            if (room.isPresent()) {
+                roomDAO.delete(room.get());
+            }
         }
 
         model.addAttribute("page", roomDAO.findAll(pageable));

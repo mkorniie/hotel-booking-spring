@@ -43,7 +43,7 @@
         <td th:text="${r.getPlaces()}"></td>
         <td th:text="${r.getRoomClass()}"></td>
         <td th:text="${r.getPrice()}"></td>
-        <td><a th:href="'/admin/rooms?method=delete&id=' + ${r.getId()}"></a></td>
+        <td><a th:text="#{u.del}" th:href="'/admin/rooms?method=delete&id=' + ${r.getId()}">Delete</a></td>
     </tr>
     </tbody>
 </table>
