@@ -12,7 +12,7 @@
     - Spring Security
     - Conditionals (disable Spring Security with 'security.enabled=false' configuration)
  - Hibernate
- - Thymeleaf + HTML + CSS
+ - Thymeleaf + HTML + CSS + Bootstrap
 
  - Шаблоны:
         - Шаблонный метод
