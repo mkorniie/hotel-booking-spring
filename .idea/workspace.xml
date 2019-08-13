@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/user-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/user-main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/admin/AdminApproveControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/anonymous/MainControllerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/anonymous/RegisterControllerTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="171" column="32" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="32" />
+            <state relative-caret-position="326">
+              <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -518,7 +503,7 @@
       <workItem from="1565647933761" duration="30447000" />
       <workItem from="1565704016200" duration="1394000" />
       <workItem from="1565723704495" duration="5000" />
-      <workItem from="1565724729526" duration="4820000" />
+      <workItem from="1565724729526" duration="5011000" />
     </task>
     <servers />
   </component>
@@ -555,7 +540,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112123000" />
+    <option name="totallyTimeSpent" value="112314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,8 +1156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="171" column="32" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="32" />
+        <state relative-caret-position="326">
+          <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
         </state>
       </provider>
     </entry>
