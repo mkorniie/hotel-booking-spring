@@ -10,13 +10,14 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
+import ua.mkorniie.model.util.directions.Pathes;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.constraints.NotNull;
 import java.util.Locale;
 
 import static ua.mkorniie.model.util.directions.Pages.*;
-import static ua.mkorniie.model.util.directions.Pages.LOGIN;
+
 
 @Slf4j
 @Service
@@ -48,14 +49,15 @@ public class LoginServiceImpl implements LoginService {
                 session.setAttribute("user", u);
                 LocaleContextHolder.setLocale(new Locale(u.getLanguage().name()));
                 if (u.getRole() == Role.USER) {
-                    return USER_MAIN_PAGE.getCropURL();
+                    return "redirect:" + Pathes.USER_MAIN.getUrl();
                 } else if (u.getRole() == Role.ADMIN) {
-                    return ADMIN_MAIN_PAGE.getCropURL();
+                    return "redirect:" + Pathes.ADMIN_MAIN.getUrl();
                 }
             } catch (Exception e) {
                 log.error(e.getMessage());
             }
         }
-        return LOGIN.getCropURL();
+        //TODO:change once security
+        return "redirect:" + Pathes.LOGIN.getUrl();
     }
 }

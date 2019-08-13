@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.admin.RoomsTableService;
 import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.util.directions.Pathes;
 
 import static ua.mkorniie.model.util.directions.Pages.ADMIN_ROOMS_PAGE;
 
@@ -39,14 +40,12 @@ public class AdminRoomsTableController {
     }
 
     @PostMapping("/admin/update-rooms")
-    public String tablesAddRoom(Model model,
-                                @RequestParam("picture") String pictureURL,
+    public String tablesAddRoom( @RequestParam("picture") String pictureURL,
                                 @RequestParam("places") Integer places,
                                 @RequestParam("roomClass") RoomClass roomClass,
-                                @RequestParam("price") Double price,
-                                @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+                                @RequestParam("price") Double price) {
 
         service.save(pictureURL, places, roomClass, price);
-        return getRooms(model, null, null, pageable);
+        return "redirect:" + Pathes.ADMIN_ROOMS.getUrl();
     }
 }

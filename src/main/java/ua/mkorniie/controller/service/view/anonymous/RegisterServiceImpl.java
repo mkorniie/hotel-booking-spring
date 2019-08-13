@@ -13,8 +13,8 @@ import ua.mkorniie.model.pojo.User;
 import javax.validation.constraints.NotNull;
 import java.util.Locale;
 
-import static ua.mkorniie.model.util.directions.Pages.LOGIN;
-import static ua.mkorniie.model.util.directions.Pages.REGISTER;
+import static ua.mkorniie.model.util.directions.Pages.LOGIN_PAGE;
+import static ua.mkorniie.model.util.directions.Pages.REGISTER_PAGE;
 
 @Slf4j
 @Service
@@ -45,6 +45,6 @@ public class RegisterServiceImpl implements RegisterService {
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-        return newUser == null ? REGISTER.getCropURL() : LOGIN.getCropURL();
+        return newUser == null ? REGISTER_PAGE.getCropURL() : LOGIN_PAGE.getCropURL();
     }
 }

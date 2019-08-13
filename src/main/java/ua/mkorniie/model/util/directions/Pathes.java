@@ -4,7 +4,9 @@ import static ua.mkorniie.model.util.directions.Pages.*;
 
 //TODO: finish pathes!
 public enum  Pathes {
-    MAIN("/", INDEX),
+    MAIN("/", INDEX_PAGE),
+    REGISTER("/register", REGISTER_PAGE),
+    LOGIN("/login", LOGIN_PAGE),
 
     ADMIN_MAIN("/admin/", ADMIN_MAIN_PAGE),
     ADMIN_APPROVE("/admin/approve", ADMIN_REQUESTAPPROVE_PAGE),
@@ -14,7 +16,7 @@ public enum  Pathes {
     USER_MAIN("/user/", USER_MAIN_PAGE),
 
     LOGOUT("/logout", ADMIN_MAIN.page),
-    APPROVE_REQ("/admin/approve", null);;
+    APPROVE_REQ("/admin/approve", null);
 
 
     private final String url;

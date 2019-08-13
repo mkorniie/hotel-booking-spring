@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.admin.UsersTableService;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
+import ua.mkorniie.model.util.directions.Pathes;
 
 
 @Slf4j
@@ -27,14 +28,13 @@ public class AdminUsersTableController {
 
 
     @PostMapping("/admin/users-update")
-    public String userUpdatePost(Model model, @RequestParam(name = "name") String name,
+    public String userUpdatePost(@RequestParam(name = "name") String name,
                                  @RequestParam(name = "mail") String email,
                                  @RequestParam(name="pass") String pass,
                                  @RequestParam(name="role") Role role,
-                                 @RequestParam(name="lang") Language language,
-                                 @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+                                 @RequestParam(name="lang") Language language) {
         service.newUser(name, email, pass, role, language);
-        return getUsers(model, null, null, pageable);
+        return "redirect:" + Pathes.ADMIN_USERS.getUrl();
     }
 
 

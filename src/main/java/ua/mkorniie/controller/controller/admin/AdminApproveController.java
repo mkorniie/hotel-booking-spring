@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.admin.RequestService;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.model.util.directions.Pathes;
 
 @Slf4j
 @RequestMapping
@@ -50,16 +51,15 @@ public class AdminApproveController {
 
     //TODO: add not null annotation
     @PostMapping("/admin/approve")
-    public String approveRequest(Model model,
+    public String approveRequest( Model model,
                                  @RequestParam("id") Long requestId,
-                                 @RequestParam("room-select") Long roomId,
-                                 @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+                                 @RequestParam("room-select") Long roomId) {
 
         if (!service.approve(requestId, roomId)) {
             model.addAttribute("method", "approve");
             model.addAttribute("id", requestId);
         }
-        return getMain(model, null, null, pageable);
+        return "redirect:" + Pathes.ADMIN_MAIN.getUrl();
     }
 
 }

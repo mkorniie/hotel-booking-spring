@@ -21,7 +21,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginGet() {
-        return LOGIN.getCropURL();
+        return LOGIN_PAGE.getCropURL();
     }
 
     @PostMapping("/login")

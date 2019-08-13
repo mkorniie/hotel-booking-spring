@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ua.mkorniie.controller.service.view.user.UserRequestsService;
 import ua.mkorniie.model.util.directions.Pages;
+import ua.mkorniie.model.util.directions.Pathes;
 
 
 //TODO: see if Sl4j is used only in Controller???
@@ -44,13 +45,12 @@ public class UserRequestsController {
     @PostMapping("/user/make-request")
     public String makeRequest(@RequestParam("places") String pl,
                               @RequestParam("class") String clazz,
-                              @RequestParam("daterange") String daterange,
-                              Model model) {
+                              @RequestParam("daterange") String daterange) {
         log.info("Retrieving data from request...");
         service.newRequest(pl, clazz, daterange);
 
         //TODO: do a redirect: redirect:/user/my-requests ?
-        return Pages.USER_MAIN_PAGE.getCropURL();
+        return "redirect:" + Pathes.USER_MAIN.getUrl();
     }
 
 }

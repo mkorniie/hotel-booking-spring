@@ -5,10 +5,10 @@ package ua.mkorniie.model.util.directions;
 
 public enum Pages {
     ACCESS_ERROR_PAGE("templates/no-rights.html"),
-    LOGIN("templates/login.html"),
-    REGISTER("templates/register-form.html"),
-    INDEX("templates/index.html"),
-    GENERAL_ERROR("templates/error-1.html"),
+    LOGIN_PAGE("templates/login.html"),
+    REGISTER_PAGE("templates/register-form.html"),
+    INDEX_PAGE("templates/index.html"),
+    GENERAL_ERROR("templates/error.html"),
 
     ADMIN_MAIN_PAGE("templates/admin/admin_main.html"),
     ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.html"),
