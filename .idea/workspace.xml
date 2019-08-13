@@ -2,129 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/RequestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/RoomsTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/UsersTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/RegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/user/UserBillsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/user/UserRequestsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/pojo_test/PojoConstructorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/pojo_test/PojoEqualsHashcodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/pojo_test/PojoSettersTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/pojo_test/UserBuilderTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/service_test/admin/BillsTableServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/java/util_test/UtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/BillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/BillRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/RequestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/BillsTableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/BillsTableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/RequestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/RoomsTableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/UserTableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UsersTableService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/RegisterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/user/UserBillsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/user/UserRequestsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/Rounder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/Rounder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/StringConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pathes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pathes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages_ua.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/admin_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/admin_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/approve-request.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/approve-request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/rooms-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/rooms-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/no-rights.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/no-user-found.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/Repo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/advice/UserNotFoundAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminApproveController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminApproveController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminBillsTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminBillsTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminUsersTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminUsersTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/LogoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserRequestsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserRequestsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/dao/BillRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/dao/RequestRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/dao/RoomRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/dao/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/security/HotelUserDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/security/HotelUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/security/SecurityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/security/SecurityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/BillsTableService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/RequestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/RoomsTableService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/admin/UsersTableService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/anonymous/LoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/anonymous/LoginServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/anonymous/RegisterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/user/UserBillsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/user/UserRequestsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/view/user/UserRequestsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityDisabledConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityDisabledConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Bill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/User$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/User$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/Rounder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/StringConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/directions/Pages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/directions/PathConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/directions/Pathes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/security/HotelUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/security/HotelUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/util/directions/Pages.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -170,24 +55,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="60">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="915">
+              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -218,18 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
               <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/java/service_test/admin/BillsTableServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -352,15 +247,15 @@
         <option value="$PROJECT_DIR$/src/main/test/java/controller_test/DatasourceConfig.java" />
         <option value="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -482,6 +377,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
@@ -682,7 +585,7 @@
       <workItem from="1565647933761" duration="30447000" />
       <workItem from="1565704016200" duration="1394000" />
       <workItem from="1565723704495" duration="5000" />
-      <workItem from="1565724729526" duration="2278000" />
+      <workItem from="1565724729526" duration="2771000" />
     </task>
     <servers />
   </component>
@@ -719,7 +622,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109581000" />
+    <option name="totallyTimeSpent" value="110074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,26 +815,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/RoomsTableServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/Rounder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1161,13 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1246,16 +1122,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1293,6 +1159,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.1.6.RELEASE/spring-boot-devtools-2.1.6.RELEASE.jar!/org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1303,24 +1207,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="60">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-devtools/2.1.6.RELEASE/spring-boot-devtools-2.1.6.RELEASE.jar!/org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="47" column="84" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
