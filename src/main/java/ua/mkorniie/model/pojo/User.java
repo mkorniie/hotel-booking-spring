@@ -1,5 +1,6 @@
 package ua.mkorniie.model.pojo;
 
+
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.Language;
@@ -7,7 +8,6 @@ import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.exceptions.NotEnoughDataException;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
@@ -26,7 +26,7 @@ import java.util.Set;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Getter @Setter                             private Long           id;
+    @Getter                                     private Long           id;
 
     @Column(unique = true, columnDefinition="NVARCHAR(255)")
     @Getter         @Basic(optional = false)    private String         name;
@@ -42,7 +42,7 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE)
     @Getter @Setter                             private Set<Request> requests;
 
-    public User(@NotNull String name, @NotNull Role role, @NotNull String passwordEncoded, @NotNull String email, @NotNull Language language) {
+    public User(@NonNull String name, @NonNull Role role, @NonNull String passwordEncoded, @NonNull String email, @NonNull Language language) {
         this.name = name;
         this.role = role;
         this.passwordEncoded = passwordEncoded;
@@ -52,23 +52,27 @@ public class User implements Serializable {
         log.info("Object User successfully created");
     }
 
-    public void setName(@NotNull String name) {
+    public void setId(@NonNull Long id) {
+        this.id = id;
+    }
+
+    public void setName(@NonNull String name) {
         this.name = name;
     }
 
-    public void setPasswordEncoded(@NotNull String passwordEncoded) {
+    public void setPasswordEncoded(@NonNull String passwordEncoded) {
         this.passwordEncoded = passwordEncoded;
     }
 
-    public void setEmail(@NotNull String email) {
+    public void setEmail(@NonNull String email) {
         this.email = email;
     }
 
-    public void setRole(@NotNull Role role) {
+    public void setRole(@NonNull Role role) {
         this.role = role;
     }
 
-    public void setLanguage(@NotNull Language language) {
+    public void setLanguage(@NonNull Language language) {
         this.language = language;
     }
 
@@ -83,35 +87,35 @@ public class User implements Serializable {
             u = new User();
         }
 
-        public Builder withId(@NotNull Long id) {
+        public Builder withId(@NonNull Long id) {
             u.id = id;
             return this;
         }
 
-        public Builder withName(@NotNull String name) {
+        public Builder withName(@NonNull String name) {
             u.name = name;
             return this;
         }
 
-        public Builder withRole(@NotNull Role role) {
+        public Builder withRole(@NonNull Role role) {
             u.role = role;
 
             return this;
         }
 
-        public Builder withPasswordEncoded(@NotNull String pass) {
+        public Builder withPasswordEncoded(@NonNull String pass) {
             u.passwordEncoded = pass;
 
             return this;
         }
 
-        public Builder withEmail(@NotNull String email) {
+        public Builder withEmail(@NonNull String email) {
             u.email = email;
 
             return this;
         }
 
-        public Builder withLanguage(@NotNull Language language) {
+        public Builder withLanguage(@NonNull Language language) {
             u.language = language;
 
             return this;

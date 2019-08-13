@@ -10,11 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.mkorniie.controller.service.view.admin.RoomsTableService;
 import ua.mkorniie.model.enums.RoomClass;
-import ua.mkorniie.model.util.directions.Pathes;
+import ua.mkorniie.service.util.directions.Pathes;
+import ua.mkorniie.service.view.admin.RoomsTableService;
 
-import static ua.mkorniie.model.util.directions.Pages.ADMIN_ROOMS_PAGE;
+import static ua.mkorniie.service.util.directions.Pages.ADMIN_ROOMS_PAGE;
 
 @Slf4j
 @Controller

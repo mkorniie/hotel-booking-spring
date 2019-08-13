@@ -10,7 +10,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import ua.mkorniie.model.enums.Role;
-import ua.mkorniie.model.util.directions.Pathes;
+import ua.mkorniie.service.util.directions.Pathes;
 
 import javax.servlet.http.HttpSession;
 

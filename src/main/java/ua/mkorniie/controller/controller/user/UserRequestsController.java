@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.mkorniie.controller.service.view.user.UserRequestsService;
-import ua.mkorniie.model.util.directions.Pathes;
+import ua.mkorniie.service.util.directions.Pathes;
+import ua.mkorniie.service.view.user.UserRequestsService;
 
 
 //TODO: both servlet and spring - make logging settings (see: https://youtu.be/iivY8B5A0Tk?t=716)

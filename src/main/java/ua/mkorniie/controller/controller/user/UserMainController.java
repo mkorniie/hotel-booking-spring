@@ -3,7 +3,7 @@ package ua.mkorniie.controller.controller.user;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import ua.mkorniie.model.util.directions.Pathes;
+import ua.mkorniie.service.util.directions.Pathes;
 
 @Slf4j
 @Controller

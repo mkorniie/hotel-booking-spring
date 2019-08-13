@@ -4,10 +4,9 @@ package ua.mkorniie.model.pojo;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.RoomClass;
-import ua.mkorniie.model.util.Rounder;
+import ua.mkorniie.service.util.Rounder;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +41,7 @@ public class Room implements Serializable {
     @OneToMany (mappedBy = "room")
     @Getter @Setter                          private List<Bill>          billList = new ArrayList<>();
 
-    public Room(@NotNull int places, @NotNull RoomClass roomClass, @NotNull String picURL, double price) {
+    public Room(int places, @NonNull RoomClass roomClass, @NonNull String picURL, double price) {
         this.places = places;
         this.roomClass = roomClass;
         this.picURL = picURL;
@@ -56,20 +55,16 @@ public class Room implements Serializable {
         log.info("Double value of 'price' field set succesfully: " + this.price);
     }
 
-    public void setId(@NotNull Long id) {
+    public void setId(@NonNull Long id) {
         this.id = id;
     }
 
-    public void setRoomClass(@NotNull RoomClass roomClass) {
+    public void setRoomClass(@NonNull RoomClass roomClass) {
         this.roomClass = roomClass;
     }
 
-    public void setPicURL(@NotNull String picURL) {
+    public void setPicURL(@NonNull String picURL) {
         this.picURL = picURL;
-    }
-
-    public void setBillList(@NotNull List<Bill> billList) {
-        this.billList = billList;
     }
 
     @Override

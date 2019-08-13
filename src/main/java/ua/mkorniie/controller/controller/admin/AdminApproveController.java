@@ -9,14 +9,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.mkorniie.controller.service.view.admin.RequestService;
 import ua.mkorniie.model.pojo.Request;
-import ua.mkorniie.model.util.directions.Pathes;
+import ua.mkorniie.service.util.directions.Pathes;
+import ua.mkorniie.service.view.admin.RequestService;
 
 @Slf4j
-@RequestMapping
 @Controller
 public class AdminApproveController {
     private final RequestService service;

@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import static ua.mkorniie.model.util.directions.Pages.INDEX_PAGE;
+import static ua.mkorniie.service.util.directions.Pages.INDEX_PAGE;
 
 @Slf4j
 @Controller

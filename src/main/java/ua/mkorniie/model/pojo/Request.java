@@ -1,15 +1,11 @@
 package ua.mkorniie.model.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.enums.Status;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.sql.Date;
 import java.util.Objects;
 
@@ -46,8 +42,8 @@ public class Request {
     @Basic(optional = false) private Status status;
 
 
-    public Request(@NotNull User user, int places, @NotNull RoomClass roomClass, @NotNull String startDate,
-                   @NotNull String endDate, @NotNull Status status) {
+    public Request(@NonNull User user, int places, @NonNull RoomClass roomClass, @NonNull String startDate,
+                   @NonNull String endDate, @NonNull Status status) {
         this.user = user;
         this.places = places;
         this.roomClass = roomClass;
@@ -58,27 +54,27 @@ public class Request {
         log.info("Object Request successfully created");
     }
 
-    public void setId(@NotNull Long id) {
+    public void setId(@NonNull Long id) {
         this.id = id;
     }
 
-    public void setUser(@NotNull User user) {
+    public void setUser(@NonNull User user) {
         this.user = user;
     }
 
-    public void setRoomClass(@NotNull RoomClass roomClass) {
+    public void setRoomClass(@NonNull RoomClass roomClass) {
         this.roomClass = roomClass;
     }
 
-    public void setStartDate(@NotNull String startDate) {
+    public void setStartDate(@NonNull String startDate) {
         this.startDate = startDate;
     }
 
-    public void setEndDate(@NotNull String endDate) {
+    public void setEndDate(@NonNull String endDate) {
         this.endDate = endDate;
     }
 
-    public void setStatus(@NotNull Status status) {
+    public void setStatus(@NonNull Status status) {
         this.status = status;
     }
 

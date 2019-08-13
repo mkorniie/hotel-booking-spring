@@ -8,7 +8,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import ua.mkorniie.controller.service.view.admin.BillsTableService;
+import ua.mkorniie.service.view.admin.BillsTableService;
 
 
 @Slf4j
