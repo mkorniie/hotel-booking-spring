@@ -18,6 +18,10 @@ mysql -u root -p < src/main/resources/data.sql
 mvn spring-boot:run
 ```
 
+В случае успешного запуска, сайт будет отображаться на порту 8090:
+
+http://localhost:8090/
+
 ## Features
 
 Использовано:
