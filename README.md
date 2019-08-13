@@ -18,6 +18,15 @@ mysql -u root -p < src/main/resources/data.sql
 mvn spring-boot:run
 ```
 
+Если возникают проблемы с запуском из-за доступа к базе данных (java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed), попробуйте зайти в mysql под новым пользователем (пароль: 12345) и выйти:
+
+```
+ mysql -u newuser -p
+ mysql> exit
+ Bye
+```
+
+
 В случае успешного запуска, сайт будет отображаться на порту 8090:
 
 http://localhost:8090/
