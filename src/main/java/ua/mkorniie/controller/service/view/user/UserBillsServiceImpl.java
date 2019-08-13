@@ -1,10 +1,10 @@
-package ua.mkorniie.controller.service.user;
+package ua.mkorniie.controller.service.view.user;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import ua.mkorniie.controller.dao.BillRepository;
 import ua.mkorniie.controller.dao.RequestRepository;
@@ -12,7 +12,7 @@ import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 
 @Slf4j
-@Component
+@Service
 public class UserBillsServiceImpl implements UserBillsService {
     private final BillRepository billRepository;
     private final RequestRepository requestRepository;

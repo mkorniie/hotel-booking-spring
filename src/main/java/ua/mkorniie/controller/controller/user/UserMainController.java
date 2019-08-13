@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-@RequestMapping("/user/")
 public class UserMainController {
 
     @GetMapping("/user/")

@@ -10,10 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ua.mkorniie.controller.service.view.user.UserBillsService;
 
 @Slf4j
 @Controller
-@RequestMapping("/user/my-bills")
 public class UserBillsController {
 
     private final UserBillsService service;
@@ -31,6 +31,11 @@ public class UserBillsController {
                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                            Model model) {
 
+        log.info("Accessing getBills method (/user/my-bills)." +
+                "Parameters : method (method)='" + method +  "', "
+                                  + "request id (req_id)='" + requestId + "', "
+                                  + "bill id (id)='" + billId + "'");
+
         if (method != null) {
             if (method.equals("cancel") && requestId != null) {
                 service.cancel(requestId);
@@ -40,6 +45,8 @@ public class UserBillsController {
         }
 
         service.paginate(model, pageable);
+        //TODO: Change to path
+        log.info("Success -  getBills method (/user/my-bills). Returning url " + "user/user-bills");
         return "user/user-bills";
     }
 }

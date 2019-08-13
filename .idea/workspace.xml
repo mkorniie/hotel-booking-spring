@@ -2,19 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UsersTableService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/HotelUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/HotelUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pathes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pathes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/user/UserBillsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/user/UserBillsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/StringConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/StringConverter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,43 +62,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="302">
+              <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="32" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +107,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="135">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,37 +129,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetailsService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#cancel#0;class#RequestServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1117#1118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/SecurityServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/security/HotelUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,19 +186,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/my</find>
-      <find>paid</find>
-      <find>Cance</find>
-      <find>@PageableDefault Pageable pageable</find>
-      <find>Page</find>
-      <find>spring</find>
-      <find>Page&lt;</find>
       <find>jpa</find>
       <find>pageable</find>
       <find>Pageable</find>
@@ -167,6 +216,13 @@
       <find>rooms</find>
       <find>alert alert-danger</find>
       <find>alert alert-error</find>
+      <find />
+      <find>pagea</find>
+      <find>Pagea</find>
+      <find>ifPre</find>
+      <find>findMatchingRooms</find>
+      <find>validSelected</find>
+      <find>showApprove</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -178,9 +234,10 @@
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie</dir>
       <dir>$PROJECT_DIR$/src/main/resources/templates</dir>
+      <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -189,57 +246,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/enums/Language.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/exceptions/UserNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/exceptions/NotEnoughDataException.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/my_log" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/no-rights.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/sql/hotel_spring.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/data-1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/enums/Status.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Bill.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/no-user-found.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/BillRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RequestRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RoomRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/user-bills.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/user-requests.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/tables.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/admin_main.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/approve-request.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/users_management.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/bills-table.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/rooms-table.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_ua.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/register-form.html" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/HotelUserDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/HotelUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pathes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserRequestsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserRequestsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/RegisterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/anonymous_view/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/anonymous/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UsersTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestApproveImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestApproveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestApproveServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/ShowRequestsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRequestsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java" />
       </list>
     </option>
   </component>
@@ -273,8 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,17 +402,6 @@
               <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="general" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -379,7 +423,26 @@
               <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
@@ -404,13 +467,24 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="CatdeaLogs" />
       <pane id="Scope" />
+      <pane id="Course" />
+      <pane id="PackagesPane" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,6 +496,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="AIDL" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -468,16 +543,19 @@
       <workItem from="1565496963971" duration="24594000" />
       <workItem from="1565610766093" duration="12901000" />
       <workItem from="1565647074467" duration="514000" />
+      <workItem from="1565647623782" duration="105000" />
+      <workItem from="1565647933761" duration="9351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75352000" />
+    <option name="totallyTimeSpent" value="84808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="205" y="23" width="1235" height="829" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2925398" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30259848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -487,7 +565,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32700136" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32428765" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32428765" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.385346" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -563,24 +641,6 @@
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java</url>
-          <line>119</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -647,312 +707,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/no-user-found.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
-          <folding>
-            <element signature="e#2#21#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/BillDaoProxy.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RoomRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/BillRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/dao/RequestRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="86" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.6.RELEASE/spring-boot-autoconfigure-2.1.6.RELEASE.jar!/org/springframework/boot/autoconfigure/data/web/SpringDataWebProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="24" column="88" lean-forward="true" selection-start-line="24" selection-start-column="88" selection-end-line="24" selection-end-column="88" />
-          <folding>
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#14#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/user-requests.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#19#0" expanded="true" />
-            <element signature="e#2#17#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#23#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#21#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#26#0" expanded="true" />
-            <element signature="e#2#26#0" expanded="true" />
-            <element signature="e#2#21#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#24#0" expanded="true" />
-            <element signature="e#2#26#0" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/enums/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/PathConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/admin_main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#17#0" expanded="true" />
-            <element signature="e#2#19#0" expanded="true" />
-            <element signature="e#2#24#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#10#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#23#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#nav#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/users_management.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="148" selection-start-line="18" selection-start-column="148" selection-end-line="18" selection-end-column="148" />
-          <folding>
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#17#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#9#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#7#0" expanded="true" />
-            <element signature="e#2#10#0" expanded="true" />
-            <element signature="e#2#7#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2#7#0" expanded="true" />
-            <element signature="e#2#10#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#9#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/approve-request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="148" selection-start-line="21" selection-start-column="148" selection-end-line="21" selection-end-column="148" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.9.RELEASE/spring-data-commons-2.1.9.RELEASE.jar!/org/springframework/data/domain/PageImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="76" column="83" lean-forward="true" selection-start-line="76" selection-start-column="83" selection-end-line="76" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/bills-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#16#0" expanded="true" />
-            <element signature="e#2#17#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2#24#0" expanded="true" />
-            <element signature="e#2#11#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#25#0" expanded="true" />
-            <element signature="e#2#26#0" expanded="true" />
-            <element signature="e#2#23#0" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.9.RELEASE/spring-data-commons-2.1.9.RELEASE.jar!/org/springframework/data/domain/Pageable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/user-bills.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding>
-            <element signature="e#2#19#0" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#18#0" expanded="true" />
-            <element signature="e#2#19#0" expanded="true" />
-            <element signature="e#2#17#0" expanded="true" />
-            <element signature="e#2#24#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2#22#0" expanded="true" />
-            <element signature="e#2#25#0" expanded="true" />
-            <element signature="e#2#26#0" expanded="true" />
-            <element signature="e#2#23#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#20#0" expanded="true" />
-            <element signature="e#2#15#0" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="method#User#0;class#User#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/rooms-table.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -1011,13 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1066,23 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="101" column="28" lean-forward="true" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1107">
-          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/user-main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -1118,10 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Bill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+        <state relative-caret-position="237">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1129,16 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,37 +890,325 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#UserBillsServiceImpl#0;class#UserBillsServiceImpl#0" />
+            <element signature="method#pay#0;class#UserBillsServiceImpl#0" />
+            <element signature="method#paginate#0;class#UserBillsServiceImpl#0" />
+            <element signature="method#cancel#0;class#UserBillsServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="69" column="72" lean-forward="true" selection-start-line="69" selection-start-column="72" selection-end-line="69" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" selection-start-line="32" selection-end-line="43" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Bill.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="660">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.aidl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/anonymous_view/test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#register#0;class#RegisterServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/ShowRequestsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UsersTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cancel#0;class#RequestServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1117#1118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
