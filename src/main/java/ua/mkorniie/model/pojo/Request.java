@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.enums.Status;
 
@@ -19,14 +19,13 @@ import java.util.Objects;
  * class of the {@link Room}, start and end dates {@link Date} and
  * a boolean identifying if the request has been approved byAdmin.
  */
+@Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Getter
 @Table(name = "requests")
 public class Request {
-    private static final Logger logger = Logger.getLogger(Request.class);
-
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long                 id;
@@ -56,7 +55,7 @@ public class Request {
         this.endDate = endDate;
         this.status = status;
 
-        logger.info("Object Request successfully created");
+        log.info("Object Request successfully created");
     }
 
     public void setId(@NotNull Long id) {

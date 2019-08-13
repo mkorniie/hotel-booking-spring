@@ -11,6 +11,7 @@ import ua.mkorniie.controller.dao.RequestRepository;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 
+import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 @Slf4j
@@ -25,7 +26,7 @@ public class UserBillsServiceImpl implements UserBillsService {
         this.requestRepository = requestRepository;
     }
 
-    private Optional<Bill> findBill(String billId) {
+    private Optional<Bill> findBill(@NotNull String billId) {
         log.info("Attempting to find Bill with String id=" + billId);
         Optional<Bill> billOptional = Optional.empty();
         try {
@@ -38,7 +39,7 @@ public class UserBillsServiceImpl implements UserBillsService {
     }
 
     @Override
-    public void pay(String billId) {
+    public void pay(@NotNull String billId) {
         log.info("Attempting to pay Bill with id=" + billId);
         Optional<Bill> billOptional = findBill(billId);
 
@@ -53,13 +54,13 @@ public class UserBillsServiceImpl implements UserBillsService {
     }
 
     @Override
-    public void paginate(Model model, Pageable pageable) {
+    public void paginate(@NotNull Model model, @NotNull Pageable pageable) {
         Page<Bill> page = billRepository.findAll(pageable);
         model.addAttribute("page", page);
     }
 
     @Override
-    public void cancel(String billId) {
+    public void cancel(@NotNull String billId) {
         log.info("Attempting to delete Bill with id=" + billId + " and corresponding Request");
         Optional<Bill> billOptional = findBill(billId);
             if (billOptional.isPresent()) {

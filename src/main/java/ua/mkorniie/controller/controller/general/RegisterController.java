@@ -25,7 +25,6 @@ public class RegisterController {
         return Pathes.REGISTER.getCropPagePath();
     }
 
-    //TODO: don't forget to add full commit info
     @PostMapping("/register")
     public String registerPost(@RequestParam(name = "name") String name,
                                @RequestParam(name = "email") String email,

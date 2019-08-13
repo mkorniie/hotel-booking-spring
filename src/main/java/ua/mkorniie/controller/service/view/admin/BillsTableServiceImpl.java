@@ -28,7 +28,7 @@ public class BillsTableServiceImpl implements BillsTableService {
     }
 
 
-    private List<Bill> getSubset(Iterable<Bill> allBills, Pageable pageable) {
+    private List<Bill> getSubset(@NotNull Iterable<Bill> allBills, @NotNull Pageable pageable) {
         return StreamSupport.stream(allBills.spliterator(), false)
                 .skip(pageable.getOffset())
                 .limit(pageable.getPageSize())

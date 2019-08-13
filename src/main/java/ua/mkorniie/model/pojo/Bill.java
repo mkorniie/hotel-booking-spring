@@ -4,15 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.slf4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.util.Rounder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
-
-import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  * Simple Java Bean object that represents a bill that a {@link User}
@@ -21,14 +19,13 @@ import static org.slf4j.LoggerFactory.getLogger;
  * If the {@link User} has paid the bill, the boolean 'isPaid' would be set to 'TRUE'.
  */
 
-//TODO: apply builder? at least at servlet?
 
+@Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "bills")
 public class Bill implements Serializable {
-	private static final Logger logger = getLogger(Bill.class);
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
@@ -52,12 +49,12 @@ public class Bill implements Serializable {
 		this.request = request;
 		this.room = room;
 
-		logger.info("Object Bill successfully created");
+		log.info("Object Bill successfully created");
 	}
 
 	public void setSum(double sum) {
 			this.sum = Rounder.round(sum);
-			logger.info("Double value of 'sum' field set succesfully: " + this.sum);
+			log.info("Double value of 'sum' field set succesfully: " + this.sum);
 	}
 
 	public void setId(@NotNull Long id) {

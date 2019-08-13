@@ -14,9 +14,7 @@ import ua.mkorniie.controller.service.view.user.UserRequestsService;
 import ua.mkorniie.model.util.directions.Pathes;
 
 
-//TODO: see if Sl4j is used only in Controller???
 //TODO: both servlet and spring - make logging settings (see: https://youtu.be/iivY8B5A0Tk?t=716)
-//TODO: add the annotation everywhere and log properly
 //TODO: move paths everywhere to Service - same as admin??? or all to controller?
 @Slf4j
 @Controller

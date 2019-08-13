@@ -1,7 +1,7 @@
 package ua.mkorniie.model.pojo;
 
 import lombok.*;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.exceptions.NotEnoughDataException;
@@ -16,6 +16,7 @@ import java.util.Set;
  * Simple Java Bean object that represents site user
  */
 
+@Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -23,8 +24,6 @@ import java.util.Set;
 @Table(name = "users")
 //@AllBasicFalse
 public class User implements Serializable {
-    private static final Logger logger = Logger.getLogger(Room.class);
-
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Getter @Setter                             private Long           id;
@@ -50,7 +49,7 @@ public class User implements Serializable {
         this.email = email;
         this.language = language;
 
-        logger.info("Object User successfully created");
+        log.info("Object User successfully created");
     }
 
     public void setName(@NotNull String name) {

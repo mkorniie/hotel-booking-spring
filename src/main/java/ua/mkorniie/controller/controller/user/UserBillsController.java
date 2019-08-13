@@ -36,7 +36,6 @@ public class UserBillsController {
 
         if (method != null && billId != null) {
             if (method.equals("cancel")) {
-                //TODO: this method is not functional!
                 service.cancel(billId);
             } else if (method.equals("pay")) {
                 service.pay(billId);

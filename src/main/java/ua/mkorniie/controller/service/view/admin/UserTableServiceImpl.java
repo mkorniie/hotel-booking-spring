@@ -56,7 +56,7 @@ public class UserTableServiceImpl implements UsersTableService {
     }
 
     @Override
-    public void changePrivilege(@NotNull String idString, String method) {
+    public void changePrivilege(@NotNull String idString, @NotNull String method) {
         Long id = parseLong(idString);
         if (id != null) {
             Optional<User> optionalUser = userRepository.findById(id);

@@ -99,7 +99,7 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
-    public String getRequests(Model model, Pageable pageable) {
+    public String getRequests(@NotNull Model model, @NotNull Pageable pageable) {
         Page<Request> page = requestRepository.findAll(pageable);
         model.addAttribute("page", page);
         return ADMIN_MAIN_PAGE.getCropPath();

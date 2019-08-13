@@ -49,7 +49,6 @@ public class AdminApproveController {
     }
 
 
-    //TODO: add not null annotation
     @PostMapping("/admin/approve")
     public String approveRequest( Model model,
                                  @RequestParam("id") Long requestId,

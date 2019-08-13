@@ -2,7 +2,7 @@ package ua.mkorniie.model.pojo;
 
 
 import lombok.*;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.util.Rounder;
 
@@ -17,13 +17,13 @@ import java.util.Objects;
  * Simple Java Bean object representing a room in a hotel that can be
  * booked by a {@link User} upon his/her {@link Request}
  */
+@Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "rooms")
 public class Room implements Serializable {
-    private static final Logger logger = Logger.getLogger(Room.class);
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -48,12 +48,12 @@ public class Room implements Serializable {
         this.picURL = picURL;
         setPrice(price);
 
-        logger.info("Object Room successfully created");
+        log.info("Object Room successfully created");
     }
 
     public void setPrice(double price) {
         this.price = Rounder.round(price);
-        logger.info("Double value of 'price' field set succesfully: " + this.price);
+        log.info("Double value of 'price' field set succesfully: " + this.price);
     }
 
     public void setId(@NotNull Long id) {
