@@ -1,4 +1,4 @@
-package java.controller_test.anonymous;
+package controller_test.anonymous;
 
 import org.junit.Assert;
 import org.junit.Before;

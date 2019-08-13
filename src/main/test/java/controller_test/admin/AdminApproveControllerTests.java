@@ -1,4 +1,4 @@
-package java.controller_test.admin;
+package controller_test.admin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

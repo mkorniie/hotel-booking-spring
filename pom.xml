@@ -149,6 +149,28 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includeProjectDependencies>false</includeProjectDependencies>
+                    <includePluginDependencies>true</includePluginDependencies>
+                    <executableDependency>
+                        <groupId>ua.mkorniie</groupId>
+                        <artifactId>hotel-booking-spring</artifactId>
+                    </executableDependency>
+                    <mainClass>ua.mkorniie.Application</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

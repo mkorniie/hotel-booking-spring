@@ -3,13 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/security/HotelUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/security/HotelUserDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/service/util/directions/Pages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/user-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/user-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserMainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/admin/AdminApproveControllerTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/anonymous/MainControllerTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/java/controller_test/anonymous/RegisterControllerTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,62 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="333">
+              <caret line="171" column="32" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -93,17 +50,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+            <state relative-caret-position="476">
+              <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="135">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,19 +69,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pathes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="291">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#897#898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/user-main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="31" column="79" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="79" />
+              <folding>
+                <element signature="e#2#15#0" expanded="true" />
+                <element signature="e#2#22#0" expanded="true" />
+                <element signature="e#2#18#0" expanded="true" />
+                <element signature="e#2#18#0" expanded="true" />
+                <element signature="e#2#19#0" expanded="true" />
+                <element signature="e#2#17#0" expanded="true" />
+                <element signature="e#2#15#0" expanded="true" />
+                <element signature="e#2#21#0" expanded="true" />
+                <element signature="e#2#21#0" expanded="true" />
+                <element signature="e#2#22#0" expanded="true" />
+                <element signature="e#2#21#0" expanded="true" />
+                <element signature="e#2#20#0" expanded="true" />
+                <element signature="e#2#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="41" selection-start-line="41" selection-end-line="47" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,8 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert alert-danger</find>
-      <find>alert alert-error</find>
       <find />
       <find>pagea</find>
       <find>Pagea</find>
@@ -173,6 +191,8 @@
       <find>boot-starter-test</find>
       <find>security</find>
       <find>AuthenticationManager</find>
+      <find>if (a</find>
+      <find>com.sun.istack.internal</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -192,11 +212,11 @@
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller</dir>
       <dir>$PROJECT_DIR$/src/main/java</dir>
-      <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie</dir>
       <dir>$PROJECT_DIR$/src/main</dir>
       <dir>$PROJECT_DIR$/.idea</dir>
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -205,11 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/admin_main.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/annotations/AllBasicFalse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.java" />
@@ -234,7 +249,6 @@
         <option value="$PROJECT_DIR$/src/test/pojo_test/PojoConstructorTest.java" />
         <option value="$PROJECT_DIR$/src/test/pojo_test/PojoEqualsHashcodeTest.java" />
         <option value="$PROJECT_DIR$/src/test/controller_test/admin/AdminApproveControllerTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" />
         <option value="$PROJECT_DIR$/src/test/controller_test/admin/AdminApproveControllerTests.java" />
         <option value="$PROJECT_DIR$/src/test/controller_test/anonymous/MainControllerTests.java" />
@@ -245,7 +259,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/test/Bill.java" />
         <option value="$PROJECT_DIR$/src/main/test/controller_test/anonymous/RegisterControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/test/java/controller_test/DatasourceConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/dao/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetailsService.java" />
@@ -253,9 +266,16 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/user-main.html" />
+        <option value="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -322,93 +342,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mkorniie" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hotel-booking-spring" type="b2602c69:ProjectViewProjectNode" />
@@ -585,7 +518,7 @@
       <workItem from="1565647933761" duration="30447000" />
       <workItem from="1565704016200" duration="1394000" />
       <workItem from="1565723704495" duration="5000" />
-      <workItem from="1565724729526" duration="2771000" />
+      <workItem from="1565724729526" duration="4820000" />
     </task>
     <servers />
   </component>
@@ -622,7 +555,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110074000" />
+    <option name="totallyTimeSpent" value="112123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -637,7 +570,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2811159" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2811159" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -647,8 +580,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32700136" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28674698" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38433734" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28674698" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.38433734" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32971507" />
@@ -723,13 +656,20 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="pageable.getOffset()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hotel_booking_spring$pojo_test_in_hotel_booking_spring.ic" NAME="pojo_test in hotel-booking-spring Coverage Results" MODIFIED="1565694070499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -815,30 +755,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/Rounder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/annotations/AllBasicFalse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/java/util_test/UtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/constraints/NotNull.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -959,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pathes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1000,47 +909,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/test/Bill.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" selection-start-line="17" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/admin/BillsTableService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1058,16 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1142,16 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -1166,10 +1018,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+        <state relative-caret-position="60">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1180,10 +1039,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1197,27 +1056,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/model/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="476">
+          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/view/anonymous/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="41" selection-start-line="41" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/HotelUserDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/user-main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="200">
+          <caret line="31" column="79" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="79" />
+          <folding>
+            <element signature="e#2#15#0" expanded="true" />
+            <element signature="e#2#22#0" expanded="true" />
+            <element signature="e#2#18#0" expanded="true" />
+            <element signature="e#2#18#0" expanded="true" />
+            <element signature="e#2#19#0" expanded="true" />
+            <element signature="e#2#17#0" expanded="true" />
+            <element signature="e#2#15#0" expanded="true" />
+            <element signature="e#2#21#0" expanded="true" />
+            <element signature="e#2#21#0" expanded="true" />
+            <element signature="e#2#22#0" expanded="true" />
+            <element signature="e#2#21#0" expanded="true" />
+            <element signature="e#2#20#0" expanded="true" />
+            <element signature="e#2#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/security/SecurityServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/admin/AdminApproveControllerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/service/util/directions/Pathes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#897#898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/RegisterControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/java/controller_test/anonymous/MainControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="171" column="32" selection-start-line="171" selection-start-column="32" selection-end-line="171" selection-end-column="32" />
         </state>
       </provider>
     </entry>
