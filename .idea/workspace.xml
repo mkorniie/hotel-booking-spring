@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminApproveController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminBillsTableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminRoomsTableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminUsersTableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/LogoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/BillsTableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RequestServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/RoomsTableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UserTableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/admin/UsersTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/anonymous/RegisterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserRequestsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/admin/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/general/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserBillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user/UserBillsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/view/user/UserBillsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/StringConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/mkorniie/model/util/directions/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/admin/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/general/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserBillsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/controller/user/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/user/UserBillsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/controller/service/user/UserBillsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/StringConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/mkorniie/model/util/StringConverter.class" afterDir="false" />
-    </list>
+    <list default="true" id="10a66f7c-e6fa-4605-aef3-63f6856b59c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+            <state relative-caret-position="345">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jpa</find>
       <find>pageable</find>
       <find>Pageable</find>
       <find>page</find>
@@ -223,6 +179,7 @@
       <find>findMatchingRooms</find>
       <find>validSelected</find>
       <find>showApprove</find>
+      <find>redire</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -234,10 +191,10 @@
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/model/pojo</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller</dir>
-      <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie</dir>
       <dir>$PROJECT_DIR$/src/main/resources/templates</dir>
       <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/service/user</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src/main/java/ua/mkorniie</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -544,18 +501,18 @@
       <workItem from="1565610766093" duration="12901000" />
       <workItem from="1565647074467" duration="514000" />
       <workItem from="1565647623782" duration="105000" />
-      <workItem from="1565647933761" duration="9351000" />
+      <workItem from="1565647933761" duration="9781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84808000" />
+    <option name="totallyTimeSpent" value="85238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="205" y="23" width="1235" height="829" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30259848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30259848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -565,7 +522,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32700136" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32428765" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32428765" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.385346" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1207,8 +1164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/mkorniie/controller/controller/user/UserRequestsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
