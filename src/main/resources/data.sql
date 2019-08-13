@@ -3,14 +3,6 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-# SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-# SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-# SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-
--- -----------------------------------------------------
--- Schema hotel_spring
--- -----------------------------------------------------
-
 -- -----------------------------------------------------
 -- Schema hotel_spring
 -- -----------------------------------------------------
@@ -96,9 +88,8 @@ CREATE TABLE IF NOT EXISTS `hotel_spring`.`bills` (
     ENGINE = InnoDB;
 
 
-# SET SQL_MODE=@OLD_SQL_MODE;
-# SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-# SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
 CREATE USER IF NOT EXISTS 'newuser'@'localhost' IDENTIFIED BY '12345';
 GRANT ALL ON `hotel_spring`.* TO 'newuser'@'localhost';
+
+INSERT INTO `hotel_spring`.`users` (`name`, `role`, `password_encoded`, `email`, `language`) VALUES ('user', 'USER', '$2a$10$OvMKBWCjBB/6.xSFNxtwMecRDw0w6U5eDRDBDEVuPMJamAoLTvK0K', 'korniiets.maria.mail@gmail.com', 0);
+INSERT INTO `hotel_spring`.`users` (`name`, `role`, `password_encoded`, `email`, `language`) VALUES ('admin', 'ADMIN', '$2a$10$xR8DUCjfiHkN1p/f86nVjeTAcrUYJ1.jqeWOsHE6AAitLoGoVaVnu', 'korniiets.maria.mail@gmail.com', 1);
