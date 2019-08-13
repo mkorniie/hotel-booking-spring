@@ -1,4 +1,4 @@
-<html xmlns:sec="http://www.w3.org/1999/xhtml">
+<html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
         <a class="p-2 text-dark" href="/user/my-requests" th:text="#{u.header.all.req}"></a>
         <a class="p-2 text-dark" href="/user/my-bills" th:text="#{u.header.all.bill}"></a>
     </nav>
-    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}"></a>
+    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.service.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}"></a>
 </div>
 <br>
 <div>

@@ -16,21 +16,21 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
     <h5 class="my-0 mr-md-auto font-weight-normal" th:text="#{a.header.welcome}">Welcome, My Lord</h5>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{a.header.main}">Requests</a>
-        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_USERS.getUrl()}" th:text="#{a.header.users}">Users</a>
-        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_BILLS.getUrl()}" th:text="#{a.header.bills}">Bills</a>
-        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_ROOMS.getUrl()}" th:text="#{a.header.rooms}">Rooms</a>    </nav>
-    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.model.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{a.header.main}">Requests</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_USERS.getUrl()}" th:text="#{a.header.users}">Users</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_BILLS.getUrl()}" th:text="#{a.header.bills}">Bills</a>
+        <a class="p-2 text-dark" th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_ROOMS.getUrl()}" th:text="#{a.header.rooms}">Rooms</a>    </nav>
+    <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.service.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
 </div>
 <div style="padding:2px 20px">
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=ua'"><img width="25px" src="templates/static/img/ua-01.png" alt="ua"></a>
-    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=ua'"><img width="25px" src="templates/static/img/ua-01.png" alt="ua"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_APPROVE.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
 </div>
 <br>
 <h3 class="m-4" th:text="#{new.req.title}">New Requests</h3>
 
 <!--<%  Request req = (Request) request.getAttribute("selected-request");%>-->
-<form th:action="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_APPROVE.getUrl()}" method="post" class="m-4">
+<form th:action="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_APPROVE.getUrl()}" method="post" class="m-4">
     <div class="form-row">
         <div class="form-group col-1">
             <label for="id">#</label>
@@ -109,7 +109,7 @@
     </ul>
 </nav>
 <div class="m-4">
-<!--    <a th:href="${T(ua.mkorniie.model.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>-->
+<!--    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_MAIN.getUrl()}" th:text="#{back.to.main}">Back to main page</a>-->
 </div>
 
 
