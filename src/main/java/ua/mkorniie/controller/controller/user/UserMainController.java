@@ -16,7 +16,7 @@ public class UserMainController {
     public String getMain(Model model, Authentication authentication) {
         log.info("Accessing GET main controller");
         if (authentication != null) {
-            HotelUserDetails userDetails = (HotelUserDetails)authentication.getDetails();
+            HotelUserDetails userDetails = (HotelUserDetails)authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
         return Pathes.USER_MAIN.getCropPagePath();
