@@ -3,7 +3,7 @@ package ua.mkorniie.controller.service.view.anonymous;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ua.mkorniie.controller.dao.UserRepository;
 import ua.mkorniie.model.enums.Language;
@@ -21,11 +21,12 @@ import static ua.mkorniie.model.util.directions.Pages.REGISTER_PAGE;
 public class RegisterServiceImpl implements RegisterService {
 
     private final UserRepository userRepository;
-    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    private final PasswordEncoder encoder;
 
     @Autowired
-    public RegisterServiceImpl(UserRepository userRepository) {
+    public RegisterServiceImpl(UserRepository userRepository, PasswordEncoder encoder) {
         this.userRepository = userRepository;
+        this.encoder = encoder;
     }
 
     @Override
@@ -45,6 +46,6 @@ public class RegisterServiceImpl implements RegisterService {
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-        return newUser == null ? REGISTER_PAGE.getCropURL() : LOGIN_PAGE.getCropURL();
+        return newUser == null ? REGISTER_PAGE.getCropPath() : LOGIN_PAGE.getCropPath();
     }
 }

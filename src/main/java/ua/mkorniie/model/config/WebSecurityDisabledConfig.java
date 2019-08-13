@@ -7,8 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @ConditionalOnProperty(
         value="security.enabled",
-        havingValue = "false",
-        matchIfMissing = false)
+        havingValue = "false")
 @EnableWebSecurity
 public class WebSecurityDisabledConfig extends WebSecurityConfigurerAdapter {
     @Override

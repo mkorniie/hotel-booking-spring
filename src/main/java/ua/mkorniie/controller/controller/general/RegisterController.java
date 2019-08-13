@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.anonymous.RegisterService;
 import ua.mkorniie.model.util.directions.Pathes;
 
-import static ua.mkorniie.model.util.directions.Pages.REGISTER_PAGE;
-
 @Slf4j
 @Controller
 public class RegisterController {
 
-    private final RegisterService service;
+    private RegisterService service;
 
     @Autowired
     public RegisterController(RegisterService service) {
@@ -24,7 +22,7 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String registerGet() {
-        return REGISTER_PAGE.getCropURL();
+        return Pathes.REGISTER.getCropPagePath();
     }
 
     //TODO: don't forget to add full commit info
@@ -32,7 +30,7 @@ public class RegisterController {
     public String registerPost(@RequestParam(name = "name") String name,
                                @RequestParam(name = "email") String email,
                                @RequestParam(name="password") String pass) {
-
+        service.register(name, email, pass);
         return "redirect:" + Pathes.LOGIN.getUrl();
     }
 }

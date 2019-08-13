@@ -1,10 +1,14 @@
 package ua.mkorniie.model.pojo;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.slf4j.Logger;
 import ua.mkorniie.model.util.Rounder;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -28,7 +32,7 @@ public class Bill implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	@Getter @Setter private Long             	id;
+	@Getter 		private Long             	id;
 
 	@Getter 		private double				sum;
 	@Getter @Setter private boolean             isPaid;
@@ -39,13 +43,14 @@ public class Bill implements Serializable {
 
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name = "room_id", referencedColumnName = "id")
-	@Getter 		 private Room				room;
+	@Getter			private Room				room;
 
-	public Bill(double sum, boolean isPaid, Request request, Room room) {
+	public Bill(@NotNull double sum, @NotNull boolean isPaid, @NotNull Request request,
+				@NotNull Room room) {
 		setSum(sum);
 		this.isPaid = isPaid;
-		setRequest(request);
-		setRoom(room);
+		this.request = request;
+		this.room = room;
 
 		logger.info("Object Bill successfully created");
 	}
@@ -55,22 +60,16 @@ public class Bill implements Serializable {
 			logger.info("Double value of 'sum' field set succesfully: " + this.sum);
 	}
 
-	public void setRequest(Request request) {
-		if (request != null) {
-			this.request = request;
-		} else {
-			logger.error("Error: 'request' object can not be null");
-			throw new NullPointerException();
-		}
+	public void setId(@NotNull Long id) {
+		this.id = id;
 	}
 
-	public void setRoom(Room room) {
-		if (room != null) {
-			this.room = room;
-		} else {
-			logger.error("Error: 'room' object can not be null");
-			throw new NullPointerException();
-		}
+	public void setRequest(@NotNull Request request) {
+		this.request = request;
+	}
+
+	public void setRoom(@NotNull Room room) {
+		this.room = room;
 	}
 
 	@Override
@@ -78,7 +77,7 @@ public class Bill implements Serializable {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Bill bill = (Bill) o;
-		return id == bill.id &&
+		return id.equals(bill.id) &&
 				Double.compare(bill.sum, sum) == 0 &&
 				isPaid == bill.isPaid &&
 				request.equals(bill.request) &&

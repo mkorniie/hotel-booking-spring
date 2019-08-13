@@ -7,6 +7,7 @@ import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.util.Rounder;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Room implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Getter @Setter private Long                id;
+    @Getter         private Long                id;
 
     @Getter @Setter @Basic(optional = false) private int                 places;
 
@@ -41,10 +42,10 @@ public class Room implements Serializable {
     @OneToMany (mappedBy = "room")
     @Getter @Setter                          private List<Bill>          billList = new ArrayList<>();
 
-    public Room(int places, RoomClass roomClass, String picURL, double price) {
+    public Room(@NotNull int places, @NotNull RoomClass roomClass, @NotNull String picURL, double price) {
         this.places = places;
-        setRoomClass(roomClass);
-        setPicURL(picURL);
+        this.roomClass = roomClass;
+        this.picURL = picURL;
         setPrice(price);
 
         logger.info("Object Room successfully created");
@@ -55,22 +56,20 @@ public class Room implements Serializable {
         logger.info("Double value of 'price' field set succesfully: " + this.price);
     }
 
-    public void setRoomClass(RoomClass roomClass) {
-        if (roomClass != null) {
-            this.roomClass = roomClass;
-        } else {
-            logger.error("Error: 'roomClass' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setId(@NotNull Long id) {
+        this.id = id;
     }
 
-    public void setPicURL(String picURL) {
-        if (picURL != null) {
-            this.picURL = picURL;
-        } else {
-            logger.error("Error: 'picURL' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setRoomClass(@NotNull RoomClass roomClass) {
+        this.roomClass = roomClass;
+    }
+
+    public void setPicURL(@NotNull String picURL) {
+        this.picURL = picURL;
+    }
+
+    public void setBillList(@NotNull List<Bill> billList) {
+        this.billList = billList;
     }
 
     @Override
@@ -78,7 +77,7 @@ public class Room implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Room room = (Room) o;
-        return id == room.id &&
+        return id.equals(room.id) &&
                 places == room.places &&
                 Double.compare(room.price, price) == 0 &&
                 roomClass == room.roomClass &&

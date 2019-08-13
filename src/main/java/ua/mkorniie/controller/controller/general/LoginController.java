@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.anonymous.LoginService;
 
-import static ua.mkorniie.model.util.directions.Pages.*;
+import static ua.mkorniie.model.util.directions.Pages.LOGIN_PAGE;
 
 
 @Slf4j
@@ -21,7 +21,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginGet() {
-        return LOGIN_PAGE.getCropURL();
+        return LOGIN_PAGE.getCropPath();
     }
 
     @PostMapping("/login")

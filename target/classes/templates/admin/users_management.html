@@ -48,8 +48,8 @@
 
         <td><a th:href="'/admin/users?method=remove&id=' + ${u.getId()}" th:text="#{u.del}">Remove</a></td>
         <td>
-            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).USER}" th:href="'/admin/users?method=priviledge_a&id=' + ${u.getId()}" th:text="#{u.to.a}">To Admin</a>
-            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).ADMIN}" th:href="'/admin/users?method=priviledge_u&id='+ ${u.getId()}" th:text="#{u.to.u}">To User</a>
+            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).USER}" th:href="'/admin/users?method=privilege_a&id=' + ${u.getId()}" th:text="#{u.to.a}">To Admin</a>
+            <a th:if="${u.getRole() == T( ua.mkorniie.model.enums.Role).ADMIN}" th:href="'/admin/users?method=privilege_u&id='+ ${u.getId()}" th:text="#{u.to.u}">To User</a>
         </td>
     </tr>
     </tbody>

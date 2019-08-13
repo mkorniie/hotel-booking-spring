@@ -1,34 +1,19 @@
 package ua.mkorniie;
 
-import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import ua.mkorniie.controller.dao.BillRepository;
-import ua.mkorniie.controller.dao.RequestRepository;
-import ua.mkorniie.controller.dao.RoomRepository;
-import ua.mkorniie.controller.dao.UserRepository;
-import ua.mkorniie.model.enums.Language;
-import ua.mkorniie.model.enums.Role;
-import ua.mkorniie.model.enums.RoomClass;
-import ua.mkorniie.model.pojo.Bill;
-import ua.mkorniie.model.pojo.Request;
-import ua.mkorniie.model.pojo.Room;
-import ua.mkorniie.model.pojo.User;
-import ua.mkorniie.model.util.PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.sql.Date;
-
-
-//TODO: fix front in chrome (at least general welcome page)
 
 @SpringBootApplication
 public class Application {
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

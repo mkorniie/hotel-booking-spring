@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.admin.RoomsTableService;
 import ua.mkorniie.model.enums.RoomClass;
@@ -20,7 +19,7 @@ import static ua.mkorniie.model.util.directions.Pages.ADMIN_ROOMS_PAGE;
 @Slf4j
 @Controller
 public class AdminRoomsTableController {
-    private final RoomsTableService service;
+    private RoomsTableService service;
 
     @Autowired
     public AdminRoomsTableController(RoomsTableService service) {
@@ -36,7 +35,7 @@ public class AdminRoomsTableController {
             service.delete(id);
         }
         service.paginate(model, pageable);
-        return ADMIN_ROOMS_PAGE.getCropURL();
+        return ADMIN_ROOMS_PAGE.getCropPath();
     }
 
     @PostMapping("/admin/update-rooms")

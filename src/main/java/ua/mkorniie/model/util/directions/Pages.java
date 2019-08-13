@@ -1,39 +1,35 @@
 package ua.mkorniie.model.util.directions;
 
-//TODO: finish transferring addresses here
-//TODO: add servlet paths here
-
 public enum Pages {
-    ACCESS_ERROR_PAGE("templates/no-rights.html"),
     LOGIN_PAGE("templates/login.html"),
     REGISTER_PAGE("templates/register-form.html"),
     INDEX_PAGE("templates/index.html"),
     GENERAL_ERROR("templates/error.html"),
 
     ADMIN_MAIN_PAGE("templates/admin/admin_main.html"),
-    ADMIN_REQUESTAPPROVE_PAGE("templates/admin/approve-request.html"),
-    ADMIN_ROOMS_PAGE("templates/admin/rooms-table.html"),
+    ADMIN_REQUEST_APPROVE_PAGE("templates/admin/approve-request.html"),
     ADMIN_BILLS_PAGE("templates/admin/bills-table.html"),
+    ADMIN_ROOMS_PAGE("templates/admin/rooms-table.html"),
     ADMIN_USERS_PAGE("templates/admin/users_management.jsp"),
 
-    USER_MAIN_PAGE("templates/user/user-main.html");
-//    ADMIN_REQUESTAPPROVE_PAGE("templates/user/approve-request.jsp"),
-//    ADMIN_TABLES_PAGE("templates/user/rooms-table.html"),
-//    ADMIN_USERS_PAGE("templates/user/users_management.jsp");
+    USER_MAIN_PAGE("templates/user/user-main.html"),
+    USER_BILLS_PAGE("templates/user/user-bills.html"),
+    USER_REQUESTS_PAGE("templates/user/user-requests.html");
 
-    private String url;
 
-    Pages(String url) {
-        this.url = url;
+    private String path;
+
+    Pages(String path) {
+        this.path = path;
     }
 
-    public String getFullUrl() {
-        return url;
+    public String getFullPath() {
+        return path;
     }
 
-    public String getCropURL() {
+    public String getCropPath() {
         int startIndex = "templates/".length();
-        int endIndex = url.indexOf(".");
-        return url.substring(startIndex, endIndex);
+        int endIndex = path.indexOf(".");
+        return path.substring(startIndex, endIndex);
     }
 }

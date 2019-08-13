@@ -2,7 +2,6 @@ package ua.mkorniie.controller.filters;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +16,7 @@ import java.io.IOException;
 public class LogFilter implements Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         log.info("########## Initiating Logging filter ##########");
     }
 
@@ -29,7 +28,6 @@ public class LogFilter implements Filter {
 
         log.info("Logging Request  {} : {}", request.getMethod(), request.getRequestURI());
 
-        //call next filter in the filter chain
         filterChain.doFilter(request, response);
 
         log.info("Logging Response :{}", response.getContentType());
@@ -37,6 +35,6 @@ public class LogFilter implements Filter {
 
     @Override
     public void destroy() {
-        // TODO: 7/4/18
+     log.info("########## Log Filter destroyed ##########");
     }
 }

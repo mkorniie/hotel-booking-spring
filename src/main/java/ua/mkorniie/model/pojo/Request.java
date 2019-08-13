@@ -1,11 +1,15 @@
 package ua.mkorniie.model.pojo;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.enums.Status;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 import java.util.Objects;
 
@@ -18,76 +22,65 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Getter
 @Table(name = "requests")
 public class Request {
     private static final Logger logger = Logger.getLogger(Request.class);
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Getter @Setter private Long                 id;
+    private Long                 id;
 
-    @ManyToOne
-    @Getter         private User                user;
+    @ManyToOne private User                user;
 
-    @Getter @Setter  @Basic(optional = false) private int                 places;
-
-    @Enumerated(EnumType.ORDINAL)
-    @Getter          @Basic(optional = false) private RoomClass           roomClass;
-
-    @Column(columnDefinition="VARCHAR(30)")
-    @Getter          @Basic(optional = false) private String                startDate;
-    @Column(columnDefinition="VARCHAR(30)")
-    @Getter          @Basic(optional = false) private String                endDate;
+    @Setter @Basic(optional = false) private int                 places;
 
     @Enumerated(EnumType.ORDINAL)
-    @Getter @Setter  @Basic(optional = false) private Status status;
+    @Basic(optional = false) private RoomClass           roomClass;
 
-//Add not Null
-    public Request(User user, int places, RoomClass roomClass, String startDate, String endDate, Status status) {
-        setUser(user);
+    @Column(columnDefinition="VARCHAR(30)")
+    @Basic(optional = false) private String                startDate;
+    @Column(columnDefinition="VARCHAR(30)")
+    @Basic(optional = false) private String                endDate;
+
+    @Enumerated(EnumType.ORDINAL)
+    @Basic(optional = false) private Status status;
+
+
+    public Request(@NotNull User user, int places, @NotNull RoomClass roomClass, @NotNull String startDate,
+                   @NotNull String endDate, @NotNull Status status) {
+        this.user = user;
         this.places = places;
-        setRoomClass(roomClass);
-        setStartDate(startDate);
-        setEndDate(endDate);
+        this.roomClass = roomClass;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.status = status;
 
         logger.info("Object Request successfully created");
     }
 
-    public void setUser(User user) {
-        if (user != null) {
-            this.user = user;
-        } else {
-            logger.error("Error: 'user' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setId(@NotNull Long id) {
+        this.id = id;
     }
 
-    public void setRoomClass(RoomClass roomClass) {
-        if (roomClass != null) {
-            this.roomClass = roomClass;
-        } else {
-            logger.error("Error: 'roomClass' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setUser(@NotNull User user) {
+        this.user = user;
     }
 
-    public void setStartDate(String startDate) {
-        if (startDate != null) {
-            this.startDate = startDate;
-        } else {
-            logger.error("Error: 'startDate' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setRoomClass(@NotNull RoomClass roomClass) {
+        this.roomClass = roomClass;
     }
 
-    public void setEndDate(String endDate) {
-        if (endDate != null) {
-            this.endDate = endDate;
-        } else {
-            logger.error("Error: 'endDate' object can not be null");
-            throw new NullPointerException();
-        }
+    public void setStartDate(@NotNull String startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setEndDate(@NotNull String endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setStatus(@NotNull Status status) {
+        this.status = status;
     }
 
     @Override
@@ -95,7 +88,7 @@ public class Request {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Request request = (Request) o;
-        return id == request.id &&
+        return id.equals(request.id) &&
                 places == request.places &&
                 status == request.status &&
                 user.equals(request.user) &&

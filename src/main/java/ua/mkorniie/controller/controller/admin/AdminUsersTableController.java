@@ -46,7 +46,7 @@ public class AdminUsersTableController {
         if(method != null && id != null) {
             if (method.equals("remove")) {
                 service.delete(id);
-            } else if (method.equals("priviledge_a") || method.equals("priviledge_u")){
+            } else if (method.equals("privilege_a") || method.equals("privilege_u")){
                 service.changePrivilege(id, method);
             }
         }

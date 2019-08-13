@@ -1,11 +1,11 @@
 package ua.mkorniie.controller.service.view.admin;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.ui.Model;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 
 import javax.validation.constraints.NotNull;
-import org.springframework.data.domain.Pageable;
 
 public interface UsersTableService {
 

@@ -14,7 +14,7 @@ import ua.mkorniie.controller.service.view.admin.BillsTableService;
 @Slf4j
 @Controller
 public class AdminBillsTableController {
-    private final BillsTableService service;
+    private BillsTableService service;
 
     @Autowired
     public AdminBillsTableController(BillsTableService service) {

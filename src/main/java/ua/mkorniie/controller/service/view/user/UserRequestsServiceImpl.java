@@ -15,6 +15,7 @@ import ua.mkorniie.model.enums.Status;
 import ua.mkorniie.model.exceptions.DateFormatException;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.model.util.StringConverter;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -44,19 +45,16 @@ public class UserRequestsServiceImpl implements UserRequestsService{
 
     @Override
     public void cancel(@NotNull String requestId) {
-        Long id = null;
-        try {
-            id = Long.parseLong(requestId);
-        } catch (Exception e) {
-            log.error("Impossible to parse request id: " + requestId + "\n"
-                    + e.getMessage());
+        Long id = StringConverter.parseLong(requestId);
+        if (id != null) {
+            Bill relatedBill = billRepository.findByRequestId(id);
+            if (relatedBill != null) {
+                billRepository.delete(relatedBill);
+            }
+            requestRepository.deleteById(id);
         }
-        Bill relatedBill = billRepository.findByRequestId(Long.valueOf(id));
-        if (relatedBill != null) {
-            billRepository.delete(relatedBill);
-        }
-        requestRepository.deleteById(Long.valueOf(id));
-        }
+    }
+
 
     @Override
     public void newRequest(@NotNull String placesString, @NotNull String clazz, @NotNull String daterange) {

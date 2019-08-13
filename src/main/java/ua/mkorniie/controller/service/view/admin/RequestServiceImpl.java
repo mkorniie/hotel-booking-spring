@@ -20,10 +20,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import static ua.mkorniie.model.util.directions.Pages.ADMIN_MAIN_PAGE;
-import static ua.mkorniie.model.util.directions.Pages.ADMIN_REQUESTAPPROVE_PAGE;
+import static ua.mkorniie.model.util.directions.Pages.ADMIN_REQUEST_APPROVE_PAGE;
 
 @Slf4j
 @Service
@@ -77,6 +78,8 @@ public class RequestServiceImpl implements RequestService {
                 requestRepository.save(selected);
             }
         } catch (NumberFormatException e) {
+            log.error("Impossible to cancel request with id " + id  + "\n" +
+                    "Error thrown: " + e.getMessage());
         }
     }
 
@@ -89,6 +92,8 @@ public class RequestServiceImpl implements RequestService {
                 selected = selectedRequestOptional.get();
             }
         } catch (NumberFormatException e) {
+            log.error("Impossible to select request with id " + id  + "\n" +
+                    "Error thrown: " + e.getMessage());
         }
         return selected;
     }
@@ -97,7 +102,7 @@ public class RequestServiceImpl implements RequestService {
     public String getRequests(Model model, Pageable pageable) {
         Page<Request> page = requestRepository.findAll(pageable);
         model.addAttribute("page", page);
-        return ADMIN_MAIN_PAGE.getCropURL();
+        return ADMIN_MAIN_PAGE.getCropPath();
     }
 
 
@@ -109,14 +114,14 @@ public class RequestServiceImpl implements RequestService {
         List<Room> matchingRooms = findMatchingRooms(selected);
         model.addAttribute("entries", matchingRooms);
 
-        return ADMIN_REQUESTAPPROVE_PAGE.getCropURL();
+        return ADMIN_REQUEST_APPROVE_PAGE.getCropPath();
     }
 
     private boolean withinDateRange(@NotNull Room r, @NotNull Request selected) {
         List<Bill> bills = Lists.newArrayList(billRepository.findAll());
 
         for (Bill b : bills) {
-            if (b.getRoom().getId() == r.getId()) {
+            if (Objects.equals(b.getRoom().getId(), r.getId())) {
                 if (datesOverlap(b, selected)) {
                     return false;
                 }

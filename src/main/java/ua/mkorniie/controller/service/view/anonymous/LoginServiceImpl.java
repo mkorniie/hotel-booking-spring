@@ -3,7 +3,7 @@ package ua.mkorniie.controller.service.view.anonymous;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -16,21 +16,22 @@ import javax.servlet.http.HttpSession;
 import javax.validation.constraints.NotNull;
 import java.util.Locale;
 
-import static ua.mkorniie.model.util.directions.Pages.*;
+import static ua.mkorniie.model.util.directions.Pages.GENERAL_ERROR;
 
 
 @Slf4j
 @Service
 public class LoginServiceImpl implements LoginService {
     private final UserRepository userRepository;
-    private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    private final PasswordEncoder encoder;
 
     @Autowired
-    public LoginServiceImpl(UserRepository userRepository) {
+    public LoginServiceImpl(UserRepository userRepository, PasswordEncoder encoder) {
         this.userRepository = userRepository;
+        this.encoder = encoder;
     }
 
-    //TODO: check once again - the order and the return (GENERAL_ERROR.getCropURL();? I have message)
+    //TODO: check once again - the order and the return (GENERAL_ERROR.getCropPath();? I have message)
     @Override
     public String login(@NotNull String username, @NotNull String password) {
         User u = null;
@@ -41,7 +42,7 @@ public class LoginServiceImpl implements LoginService {
         }
 
         if (u == null) {
-            return GENERAL_ERROR.getCropURL();
+            return GENERAL_ERROR.getCropPath();
         } else if (encoder.matches(password, u.getPasswordEncoded())) {
             try {
                 ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();

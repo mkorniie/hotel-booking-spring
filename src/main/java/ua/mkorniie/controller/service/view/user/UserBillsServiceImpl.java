@@ -11,6 +11,8 @@ import ua.mkorniie.controller.dao.RequestRepository;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 
+import java.util.Optional;
+
 @Slf4j
 @Service
 public class UserBillsServiceImpl implements UserBillsService {
@@ -23,16 +25,30 @@ public class UserBillsServiceImpl implements UserBillsService {
         this.requestRepository = requestRepository;
     }
 
+    private Optional<Bill> findBill(String billId) {
+        log.info("Attempting to find Bill with String id=" + billId);
+        Optional<Bill> billOptional = Optional.empty();
+        try {
+            billOptional = billRepository.findById(Long.parseLong(billId));
+        } catch (Exception e) {
+            log.error("Failure: Bill with id=" + billId + " wasn't found \n" +
+                    "Thrown: " + e.getMessage());
+        }
+        return billOptional;
+    }
+
     @Override
     public void pay(String billId) {
         log.info("Attempting to pay Bill with id=" + billId);
-        try {
-            Bill bill = billRepository.findById(Long.parseLong(billId)).get();
+        Optional<Bill> billOptional = findBill(billId);
+
+        if (billOptional.isPresent()) {
+            Bill bill = billOptional.get();
             bill.setPaid(true);
             billRepository.save(bill);
             log.info("Success");
-        } catch (Exception e) {
-            log.error("Failure: Bill with id=" + billId + " hasn't been paid");
+        } else {
+            log.error("Error: Bill hasn't been paid");
         }
     }
 
@@ -43,16 +59,17 @@ public class UserBillsServiceImpl implements UserBillsService {
     }
 
     @Override
-    public void cancel(String requestId) {
-        log.info("Attempting to delete Bill with id=" + requestId + " and corresponding Request");
-        try {
-            Bill bill = billRepository.findById(Long.parseLong(requestId)).get();
-            Request request = bill.getRequest();
-            billRepository.delete(bill);
-            requestRepository.delete(request);
-            log.info("Success");
-        } catch (Exception e) {
-            log.error("Failure: Bill with id=" + requestId + " hasn't been deleted");
-        }
+    public void cancel(String billId) {
+        log.info("Attempting to delete Bill with id=" + billId + " and corresponding Request");
+        Optional<Bill> billOptional = findBill(billId);
+            if (billOptional.isPresent()) {
+                Bill bill = billOptional.get();
+                Request request = bill.getRequest();
+                billRepository.delete(bill);
+                requestRepository.delete(request);
+                log.info("Success");
+            } else {
+                log.error("Failure: Bill with id=" + billId + " hasn't been deleted\n");
+            }
     }
 }

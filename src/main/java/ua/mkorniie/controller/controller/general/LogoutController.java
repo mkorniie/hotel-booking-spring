@@ -22,8 +22,7 @@ public class LogoutController {
         ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
         HttpSession session = attr.getRequest().getSession(true);
         session.invalidate();
-        //TODO: redirect
-        return "redirect:" + "/";
+        return "redirect:" + Pathes.MAIN.getUrl();
     }
 
     @GetMapping("/success")
@@ -47,7 +46,7 @@ public class LogoutController {
 //        if (auth != null){
 //            new SecurityContextLogoutHandler().logout(request, response, auth);
 //        }
-//        logger.info("Session inalidated successfully.");
+//        logger.info("Session invalidated successfully.");
 //        logger.info("User logged out successfully.");
 //        return "index";
 //        }

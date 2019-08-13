@@ -44,11 +44,11 @@ public class User implements Serializable {
     @Getter @Setter                             private Set<Request> requests;
 
     public User(@NotNull String name, @NotNull Role role, @NotNull String passwordEncoded, @NotNull String email, @NotNull Language language) {
-        setName(name);
-        setRole(role);
-        setPasswordEncoded(passwordEncoded);
-        setEmail(email);
-        setLanguage(language);
+        this.name = name;
+        this.role = role;
+        this.passwordEncoded = passwordEncoded;
+        this.email = email;
+        this.language = language;
 
         logger.info("Object User successfully created");
     }

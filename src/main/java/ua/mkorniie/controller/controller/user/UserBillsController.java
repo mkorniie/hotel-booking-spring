@@ -8,9 +8,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.mkorniie.controller.service.view.user.UserBillsService;
+import ua.mkorniie.model.util.directions.Pathes;
 
 @Slf4j
 @Controller
@@ -26,27 +26,25 @@ public class UserBillsController {
 
     @GetMapping("/user/my-bills")
     public String getBills(@RequestParam(value = "method", required = false) String method,
-                           @RequestParam(value = "req_id", required = false) String requestId,
                            @RequestParam(value = "id", required = false) String billId,
                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                            Model model) {
 
         log.info("Accessing getBills method (/user/my-bills)." +
                 "Parameters : method (method)='" + method +  "', "
-                                  + "request id (req_id)='" + requestId + "', "
                                   + "bill id (id)='" + billId + "'");
 
-        if (method != null) {
-            if (method.equals("cancel") && requestId != null) {
-                service.cancel(requestId);
-            } else if (method.equals("pay") && billId != null) {
+        if (method != null && billId != null) {
+            if (method.equals("cancel")) {
+                //TODO: this method is not functional!
+                service.cancel(billId);
+            } else if (method.equals("pay")) {
                 service.pay(billId);
             }
         }
 
         service.paginate(model, pageable);
-        //TODO: Change to path
-        log.info("Success -  getBills method (/user/my-bills). Returning url " + "user/user-bills");
-        return "user/user-bills";
+        log.info("Success -  getBills method (/user/my-bills). Returning url " + Pathes.USER_BILLS.getCropPagePath());
+        return Pathes.USER_BILLS.getCropPagePath();
     }
 }

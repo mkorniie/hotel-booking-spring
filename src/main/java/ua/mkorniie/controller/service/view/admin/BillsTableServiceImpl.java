@@ -28,7 +28,7 @@ public class BillsTableServiceImpl implements BillsTableService {
     }
 
 
-    public List<Bill> getSubset(Iterable<Bill> allBills, Pageable pageable) {
+    private List<Bill> getSubset(Iterable<Bill> allBills, Pageable pageable) {
         return StreamSupport.stream(allBills.spliterator(), false)
                 .skip(pageable.getOffset())
                 .limit(pageable.getPageSize())
@@ -41,8 +41,8 @@ public class BillsTableServiceImpl implements BillsTableService {
         Iterable<Bill> allBills = billRepository.findAll();
 
         model.addAttribute("total", StreamSupport.stream(allBills.spliterator(), false)
-                .filter(b -> b.isPaid())
-                .mapToDouble(b -> b.getSum())
+                .filter(Bill::isPaid)
+                .mapToDouble(Bill::getSum)
                 .sum());
 
         List<Bill> subset = getSubset(allBills, pageable);
@@ -51,6 +51,6 @@ public class BillsTableServiceImpl implements BillsTableService {
                 pageable,
                 IterableUtils.size(allBills)));
 
-        return ADMIN_BILLS_PAGE.getCropURL();
+        return ADMIN_BILLS_PAGE.getCropPath();
     }
 }
