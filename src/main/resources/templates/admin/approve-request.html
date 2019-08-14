@@ -86,7 +86,7 @@
     </tr>
     </thead>
     <tbody>
-        <tr th:each=" r : *{entries}">
+        <tr th:each=" r : *{page.getContent()}">
             <th scope="row" th:text="${r.getId()}"> room id </th>
                 <td><img height="120px" th:src="${r.getPicURL()}" alt="room"></td>
                 <td th:text="${r.getPlaces()}"> Places </td>
@@ -95,17 +95,11 @@
         </tr>
     </tbody>
 </table>
-<nav aria-label="my-nav">
+<nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
     <ul class="pagination">
-<!--        <%  Integer pageCount = (Integer) request.getAttribute("page-count");-->
-<!--            Integer active = (Integer) request.getAttribute("active-page");-->
-<!--            for(int i  = 1; i <= pageCount; i++) {-->
-<!--                if (i == active) {%>-->
-<!--                    <li class="page-item active"><a class="page-link" href="/approve?&page=<%=i%>"><%=i%></a></li>-->
-<!--                    <%} else {%>-->
-<!--                    <li class="page-item"><a class="page-link" href="/approve?&page=<%=i%>"><%=i%></a></li>-->
-<!--                    <%}-->
-<!--            }%>-->
+        <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
+            <a class="page-link" th:href="'/admin/approve?page=' + ${i} + '&id=' + ${selected_request.getId()}" th:text="${i + 1}"> Page number</a>
+        </li>
     </ul>
 </nav>
 <div class="m-4">

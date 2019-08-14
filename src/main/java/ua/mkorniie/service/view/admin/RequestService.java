@@ -14,5 +14,5 @@ public interface RequestService {
 
     String getRequests(@NonNull Model model, @NonNull Pageable pageable);
 
-    String showApprove(@NonNull Model model, @NonNull Request selected);
+    String showApprove(@NonNull Pageable pageable, @NonNull Model model, @NonNull Request selected);
 }

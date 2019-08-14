@@ -107,12 +107,12 @@ public class RequestServiceImpl implements RequestService {
 
 
     @Override
-    public String showApprove(@NonNull Model model, @NonNull Request selected) {
+    public String showApprove(@NonNull Pageable pageable, @NonNull Model model, @NonNull Request selected) {
 
         model.addAttribute("selected_request", selected);
 
-        List<Room> matchingRooms = findMatchingRooms(selected);
-        model.addAttribute("entries", matchingRooms);
+        Page<Room> page = roomRepository.findAll(pageable);
+        model.addAttribute("page", page);
 
         return ADMIN_REQUEST_APPROVE_PAGE.getCropPath();
     }

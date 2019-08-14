@@ -15,6 +15,7 @@ import ua.mkorniie.model.enums.Status;
 import ua.mkorniie.model.exceptions.DateFormatException;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.model.pojo.User;
 import ua.mkorniie.service.security.HotelUserDetails;
 import ua.mkorniie.service.util.StringConverter;
 
@@ -38,7 +39,6 @@ public class UserRequestsServiceImpl implements UserRequestsService{
         this.userRepository = userRepository;
     }
 
-    //TODO: what happens if nothing is found??
     @Override
     public void paginate(@NonNull HotelUserDetails principal, @NonNull Model model, @NonNull Pageable pageable) {
         Page<Request> page = requestRepository.findAllByUser(principal.getUser(), pageable);
@@ -66,12 +66,15 @@ public class UserRequestsServiceImpl implements UserRequestsService{
             List<String> dates = parseDates(daterange);
             log.info("Dates: " + dates);
 
-            Request newRequest = new Request(userRepository.findByName(principal.getUsername()).get(),
-                    places,
-                    roomClass,
-                    dates.get(0), dates.get(1),
-                    Status.waitingForApproval);
-            requestRepository.save(newRequest);
+            Optional<User> name = userRepository.findByName(principal.getUsername());
+            if (name.isPresent()) {
+                Request newRequest = new Request(name.get(),
+                        places,
+                        roomClass,
+                        dates.get(0), dates.get(1),
+                        Status.waitingForApproval);
+                requestRepository.save(newRequest);
+            }
         } catch (Exception e) {
             log.error("Impossible to create request object: wrong input format;");
             log.error(e.getMessage());

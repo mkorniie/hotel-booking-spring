@@ -35,8 +35,6 @@ public class LoginServiceImpl implements LoginService {
         this.encoder = encoder;
     }
 
-    //TODO: check once again - the order and the return (GENERAL_ERROR.getCropPath();? I have message)
-
     public String login(Authentication authentication, @NonNull String username, @NonNull String password) {
 
         if (authentication != null) {
@@ -71,7 +69,7 @@ public class LoginServiceImpl implements LoginService {
                 log.error(e.getMessage());
             }
         }
-        //TODO:change once security
+
         return "redirect:" + Pathes.LOGIN.getUrl();
     }
 }

@@ -32,8 +32,6 @@ public class UserRequestsController {
                               @RequestParam(value = "req_id", required = false) String id,
                               @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                               Model model) {
-        //TODO: remember once there is security - only page corresponding to the user!
-
         if (method != null && id != null && method.equals("cancel")) {
                 service.cancel(id);
         }

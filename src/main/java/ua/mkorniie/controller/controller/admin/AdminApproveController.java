@@ -33,7 +33,7 @@ public class AdminApproveController {
             if (method.equals("approve")) {
                 Request selected = service.validSelected(id);
                 if (selected != null){
-                    return service.showApprove(model, selected);
+                    return service.showApprove(pageable, model, selected);
                 }
 
 
@@ -49,12 +49,24 @@ public class AdminApproveController {
 
     @PostMapping("/admin/approve")
     public String approveRequest( Model model,
-                                 @RequestParam("id") Long requestId,
-                                 @RequestParam("room-select") Long roomId) {
+                                  @RequestParam("id") Long requestId,
+                                  @RequestParam("room-select") Long roomId,
+                                  @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
 
         if (!service.approve(requestId, roomId)) {
             model.addAttribute("method", "approve");
             model.addAttribute("id", requestId);
+        }
+        return "redirect:" + Pathes.ADMIN_MAIN.getUrl();
+    }
+
+    @GetMapping("/admin/approve")
+    public String getApproveRequest(Model model,
+                                    @RequestParam(name = "id", required = false) String id,
+                                    @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+        Request selected = service.validSelected(id);
+        if (selected != null){
+            return service.showApprove(pageable, model, selected);
         }
         return "redirect:" + Pathes.ADMIN_MAIN.getUrl();
     }
