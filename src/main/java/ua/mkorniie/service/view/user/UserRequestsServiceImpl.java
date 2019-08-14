@@ -15,6 +15,7 @@ import ua.mkorniie.model.enums.Status;
 import ua.mkorniie.model.exceptions.DateFormatException;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.service.security.HotelUserDetails;
 import ua.mkorniie.service.util.StringConverter;
 
 import java.text.ParseException;
@@ -58,15 +59,14 @@ public class UserRequestsServiceImpl implements UserRequestsService{
 
 
     @Override
-    public void newRequest(@NonNull String placesString, @NonNull String clazz, @NonNull String daterange) {
+    public void newRequest(@NonNull HotelUserDetails principal, @NonNull String placesString, @NonNull String clazz, @NonNull String daterange) {
         try {
             int places = Integer.parseInt(placesString);
             RoomClass roomClass = RoomClass.valueOf(clazz);
             List<String> dates = parseDates(daterange);
             log.info("Dates: " + dates);
 
-            //TODO: change to current user!!
-            Request newRequest = new Request(userRepository.findById(2L).get(),
+            Request newRequest = new Request(userRepository.findByName(principal.getUsername()).get(),
                     places,
                     roomClass,
                     dates.get(0), dates.get(1),

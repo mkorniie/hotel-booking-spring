@@ -5,11 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ua.mkorniie.service.security.HotelUserDetails;
 import ua.mkorniie.service.util.directions.Pathes;
 import ua.mkorniie.service.view.user.UserRequestsService;
 
@@ -40,11 +42,17 @@ public class UserRequestsController {
     }
 
     @PostMapping("/user/make-request")
-    public String makeRequest(@RequestParam("places") String pl,
+    public String makeRequest(Authentication authentication,
+                                @RequestParam("places") String pl,
                               @RequestParam("class") String clazz,
                               @RequestParam("daterange") String daterange) {
         log.info("Retrieving data from request...");
-        service.newRequest(pl, clazz, daterange);
+        if (authentication != null) {
+            service.newRequest((HotelUserDetails)authentication.getPrincipal(), pl, clazz, daterange);
+        } else {
+            log.error("Authentication object ir null: unauthorized access!");
+        }
+
 
         return "redirect:" + Pathes.USER_MAIN.getUrl();
     }
