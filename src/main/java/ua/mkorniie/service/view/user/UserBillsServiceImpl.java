@@ -11,6 +11,7 @@ import ua.mkorniie.dao.BillRepository;
 import ua.mkorniie.dao.RequestRepository;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.service.security.HotelUserDetails;
 
 import java.util.Optional;
 
@@ -54,8 +55,8 @@ public class UserBillsServiceImpl implements UserBillsService {
     }
 
     @Override
-    public void paginate(@NonNull Model model, @NonNull Pageable pageable) {
-        Page<Bill> page = billRepository.findAll(pageable);
+    public void paginate(@NonNull HotelUserDetails principal, @NonNull Model model, @NonNull Pageable pageable) {
+        Page<Bill> page = billRepository.findAllByRequest_UserId(principal.getUser().getId(), pageable);
         model.addAttribute("page", page);
     }
 

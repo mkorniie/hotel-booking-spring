@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import ua.mkorniie.service.security.HotelUserDetails;
 
 public interface UserRequestsService {
-    void paginate(@NonNull Model model, @NonNull Pageable pageable);
+    void paginate(@NonNull HotelUserDetails principal, @NonNull Model model, @NonNull Pageable pageable);
 
     void cancel(@NonNull String requestId);
 

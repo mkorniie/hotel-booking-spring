@@ -40,8 +40,8 @@ public class UserRequestsServiceImpl implements UserRequestsService{
 
     //TODO: what happens if nothing is found??
     @Override
-    public void paginate(@NonNull Model model, @NonNull Pageable pageable) {
-        Page<Request> page = requestRepository.findAll(pageable);
+    public void paginate(@NonNull HotelUserDetails principal, @NonNull Model model, @NonNull Pageable pageable) {
+        Page<Request> page = requestRepository.findAllByUser(principal.getUser(), pageable);
         model.addAttribute("page", page);
     }
 

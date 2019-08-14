@@ -27,7 +27,8 @@ public class UserRequestsController {
 
 
     @GetMapping("/user/my-requests")
-    public String getRequests(@RequestParam(value = "method", required = false) String method,
+    public String getRequests(Authentication authentication,
+                              @RequestParam(value = "method", required = false) String method,
                               @RequestParam(value = "req_id", required = false) String id,
                               @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                               Model model) {
@@ -37,13 +38,17 @@ public class UserRequestsController {
                 service.cancel(id);
         }
 
-        service.paginate(model, pageable);
+        if (authentication != null) {
+            service.paginate((HotelUserDetails)authentication.getPrincipal(), model, pageable);
+        } else {
+            log.error("Authentication object ir null: unauthorized access!");
+        }
         return Pathes.USER_REQUESTS.getCropPagePath();
     }
 
     @PostMapping("/user/make-request")
     public String makeRequest(Authentication authentication,
-                                @RequestParam("places") String pl,
+                              @RequestParam("places") String pl,
                               @RequestParam("class") String clazz,
                               @RequestParam("daterange") String daterange) {
         log.info("Retrieving data from request...");

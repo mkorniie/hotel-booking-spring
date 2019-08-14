@@ -5,10 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ua.mkorniie.service.security.HotelUserDetails;
 import ua.mkorniie.service.util.directions.Pathes;
 import ua.mkorniie.service.view.user.UserBillsService;
 
@@ -25,7 +27,8 @@ public class UserBillsController {
 
 
     @GetMapping("/user/my-bills")
-    public String getBills(@RequestParam(value = "method", required = false) String method,
+    public String getBills(Authentication authentication,
+                           @RequestParam(value = "method", required = false) String method,
                            @RequestParam(value = "id", required = false) String billId,
                            @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable,
                            Model model) {
@@ -42,7 +45,12 @@ public class UserBillsController {
             }
         }
 
-        service.paginate(model, pageable);
+        if (authentication != null) {
+            service.paginate((HotelUserDetails)authentication.getPrincipal(), model, pageable);
+        } else {
+            log.error("Authentication object ir null: unauthorized access!");
+        }
+
         log.info("Success -  getBills method (/user/my-bills). Returning url " + Pathes.USER_BILLS.getCropPagePath());
         return Pathes.USER_BILLS.getCropPagePath();
     }
