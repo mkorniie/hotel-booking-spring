@@ -36,6 +36,7 @@ http://localhost:8090/
 Использовано:
  - Java 8:
    - Streams
+   - Optionals
  - Spring:
     - Spring Boot
     - Spring Security
@@ -59,3 +60,4 @@ http://localhost:8090/
         
         ![alt text](img/3.png)
  - Password encrypted (BCrypt)
+ - JUnit, Mockito
