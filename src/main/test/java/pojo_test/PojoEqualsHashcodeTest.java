@@ -7,7 +7,6 @@ import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.exceptions.NotEnoughDataException;
 import ua.mkorniie.model.pojo.User;
 
-//TODO: finish or delete
 public class PojoEqualsHashcodeTest {
     @Test
     void testUser() {

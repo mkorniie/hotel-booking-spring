@@ -14,8 +14,6 @@ import ua.mkorniie.service.util.directions.Pathes;
 import ua.mkorniie.service.view.user.UserRequestsService;
 
 
-//TODO: both servlet and spring - make logging settings (see: https://youtu.be/iivY8B5A0Tk?t=716)
-//TODO: move paths everywhere to Service - same as admin??? or all to controller?
 @Slf4j
 @Controller
 public class UserRequestsController {
