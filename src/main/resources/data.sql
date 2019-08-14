@@ -93,3 +93,8 @@ GRANT ALL ON `hotel_spring`.* TO 'newuser'@'localhost';
 
 INSERT INTO `hotel_spring`.`users` (`name`, `role`, `password_encoded`, `email`, `language`) VALUES ('user', 'USER', '$2a$10$OvMKBWCjBB/6.xSFNxtwMecRDw0w6U5eDRDBDEVuPMJamAoLTvK0K', 'korniiets.maria.mail@gmail.com', 0);
 INSERT INTO `hotel_spring`.`users` (`name`, `role`, `password_encoded`, `email`, `language`) VALUES ('admin', 'ADMIN', '$2a$10$xR8DUCjfiHkN1p/f86nVjeTAcrUYJ1.jqeWOsHE6AAitLoGoVaVnu', 'korniiets.maria.mail@gmail.com', 1);
+
+
+INSERT INTO `hotel_spring`.`rooms` (`places`, `room_class`, `picurl`, `price`) VALUES (1, 0, '/img/rooms/lux.jpg', 300.00);
+INSERT INTO `hotel_spring`.`rooms` (`places`, `room_class`, `picurl`, `price`) VALUES (2, 1, '/img/rooms/first.jpg', 200.00);
+INSERT INTO `hotel_spring`.`rooms` (`places`, `room_class`, `picurl`, `price`) VALUES (3, 2, '/img/rooms/second.jpg', 100.00);
