@@ -20,8 +20,8 @@
     <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.service.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
 </div>
 <div style="padding:2px 20px">
-    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_BILLS.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
-    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_BILLS.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_BILLS.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" th:alt="#{ua.flag.alt}"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_BILLS.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" th:alt="#{en.flag.alt}"></a>
 </div>
 <br>
 <div class="m-4"><h2 th:text="#{user.bills.table.title}">Bills</h2></div>

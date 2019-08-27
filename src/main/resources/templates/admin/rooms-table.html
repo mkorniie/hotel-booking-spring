@@ -20,8 +20,8 @@
     <a class="btn btn-outline-primary" th:href="${T(ua.mkorniie.service.util.directions.Pathes).LOGOUT.getUrl()}" th:text="#{u.header.logout}">Logout</a>
 </div>
 <div style="padding:2px 20px">
-    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" alt="ua"></a>
-    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" alt="en"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=ua'"><img width="25px" src="/img/ua-01.png" th:alt="#{ua.flag.alt}"></a>
+    <a th:href="${T(ua.mkorniie.service.util.directions.Pathes).ADMIN_ROOMS.getUrl()} + '?lang=en'"><img width="25px" src="/img/us-01.png" th:alt="#{en.flag.alt}"></a>
 </div>
 <br>
 <div class="m-4"><h2 th:text="#{room.title}">Rooms</h2></div>
@@ -39,7 +39,7 @@
     <tbody>
     <tr th:each="r : *{page.getContent()}">
         <th scope="row" th:text="${r.getId()}"></th>
-        <td><img height="120px" th:src="${r.getPicURL()}" alt="room"></td>
+        <td><img height="120px" th:src="${r.getPicURL()}" th:alt="#{room.picture.alt}"></td>
         <td th:text="${r.getPlaces()}"></td>
         <td th:text="${r.getRoomClass()}"></td>
         <td th:text="${r.getPrice()}"></td>

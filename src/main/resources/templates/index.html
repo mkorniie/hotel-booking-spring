@@ -18,8 +18,8 @@
     </div>
 </header>
 <div style="padding:2px 20px">
-    <a href="/?lang=ua"><img width="25px" src="img/ua-01.png" alt="ua"></a>
-    <a href="/?lang=en"><img width="25px" src="img/us-01.png" alt="en"></a>
+    <a href="/?lang=ua"><img width="25px" src="img/ua-01.png" th:alt="#{ua.flag.alt}"></a>
+    <a href="/?lang=en"><img width="25px" src="img/us-01.png" th:alt="#{en.flag.alt}"></a>
 </div>
 <div style="width: 100%; padding-bottom: 20px">
     <h1 style="text-align: center; margin-top: 65px" th:text="#{welcome.message1}"></h1>
@@ -29,7 +29,7 @@
 <div style="width: 70px; height:1px; background: darkgrey; margin: 0 auto;  margin-bottom: 50px"></div>
     <img style="display: block;
                 margin-left: auto;
-                margin-right: auto;" height="700px" src="img/hotel/hotel.jpg" alt="hotel image">
+                margin-right: auto;" height="700px" src="img/hotel/hotel.jpg" th:alt="#{hotel.image.alt}">
 <footer style="width:100%; height: 20px; background: black">
 </footer>
 </body>
