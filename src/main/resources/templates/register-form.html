@@ -1,13 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 	<link rel="stylesheet" th:href="@{/css/style.css}">
 	<title th:text="#{register.title}"></title>
 </head>
 <body>
-<div style="color: grey;" class="alert alert-danger" th:if = "${error}" th:text="#{login.or.pass.wrong}">
+<div class="alert alert-danger text-dark" th:if = "${error}" th:text="#{login.or.pass.wrong}">
 </div>
 <div>
 	<div class="p-2">
