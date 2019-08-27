@@ -1,10 +1,13 @@
-<html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!--[if lt IE 9]>
+    <script> document.createElement("descr"); </script>
+    <![endif]-->
     <meta charset="utf-8">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <title th:text="#{welcome.title}">Title</title>
 </head>
 <body>
@@ -12,8 +15,10 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
 <!--        <h5 class="my-0 mr-md-auto font-weight-normal">Welcome, My Lord</h5>-->
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="/login" th:text="#{submit.value}">Submit</a>
-            <a class="p-2 text-dark" href="/register" th:text="#{register.link.text}">Register</a>
+            <descr th:data-title="#{login.data.title}">
+                <a class="p-2 text-dark" href="/login" th:text="#{login.link.value}">Log in</a>
+            </descr>
+            <a class="p-2 text-dark describable" href="/register" th:text="#{register.link.text}" th:data-title="#{register.data.title}">Register</a>
         </nav>
     </div>
 </header>

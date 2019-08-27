@@ -305,3 +305,12 @@ input[type=text]:placeholder {
 table {
     margin-top: 50px;
 }
+
+descr:hover::after, .describable:hover::after {
+    content: attr(data-title);
+    background: #ffe;
+    padding: 5px;
+    border: 1px solid #666;
+    position: absolute;
+    top: 20px;
+}

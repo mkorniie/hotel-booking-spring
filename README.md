@@ -42,7 +42,10 @@ http://localhost:8090/
     - Spring Security
     - Conditionals (disable Spring Security with 'security.enabled=false' configuration)
  - Hibernate
- - Thymeleaf + HTML + CSS + Bootstrap
+ 
+ - Front:
+    - Thymeleaf + HTML + CSS + Bootstrap
+    - HTML 5 new features (data-* attribute)
 
  - Шаблоны:
         - Шаблонный метод

@@ -1,3 +1,5 @@
+
+//I18n
 $(document).ready(function() {
     $("#locales").change(function () {
         var selectedOption = $('#locales').val();
@@ -6,3 +8,19 @@ $(document).ready(function() {
         }
     });
 });
+
+
+// //Custom tags
+// function customTag(tagName, tagFunction) {
+//     document.createElement(tagName);
+//     var tagInstances = document.getElementsByTagName(tagName);
+//     for ( var i = 0; i < tagInstances.length; i++) {
+//         tagFunction(tagInstances[i]);
+//     }
+// }
+//
+// function () {
+//
+// }
+//
+// customTag("codingdude-gravatar", codingdudeGravatar);
