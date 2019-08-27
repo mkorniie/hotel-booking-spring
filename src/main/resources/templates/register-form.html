@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-	<link rel="stylesheet" href="templates/css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<title th:text="#{register.title}"></title>
 </head>
 <body>
@@ -11,8 +11,8 @@
 </div>
 <div>
 	<div class="p-2">
-		<a href="/register?lang=ua"><img width="25px" src="/img/ua-01.png" th:alt="#{ua.flag.alt}"></a>
-		<a href="/register?lang=en"><img width="25px" src="/img/us-01.png" th:alt="#{en.flag.alt}"></a>
+		<a href="/register?lang=ua" class="describable" th:data-title="#{ua.flag.data.title}"><img width="25px" src="/img/ua-01.png" th:alt="#{ua.flag.alt}"></a>
+		<a href="/register?lang=en" class="describable" th:data-title="#{en.flag.data.title}"><img width="25px" src="/img/us-01.png" th:alt="#{en.flag.alt}"></a>
 	</div>
 </div>
 <br>
