@@ -312,5 +312,13 @@ table {
     background: #f8f9f8fa;
     padding: 3px;
     position: absolute;
-    top: 20px;
+    z-index: 1000;
+    margin-top: 15px;
+    /*position: relative;*/
+    /*top: 20px;*/
+
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
 }
