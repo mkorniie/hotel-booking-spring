@@ -1,8 +1,5 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!--[if lt IE 9]>
-    <script> document.createElement("descr"); </script>
-    <![endif]-->
     <meta charset="utf-8">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -15,10 +12,16 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
 <!--        <h5 class="my-0 mr-md-auto font-weight-normal">Welcome, My Lord</h5>-->
         <nav class="my-2 my-md-0 mr-md-3">
-            <descr th:data-title="#{login.data.title}">
-                <a class="p-2 text-dark" href="/login" th:text="#{login.link.value}">Log in</a>
-            </descr>
-            <a class="p-2 text-dark describable" href="/register" th:text="#{register.link.text}" th:data-title="#{register.data.title}">Register</a>
+            <a class="p-2 text-dark describable"
+               href="/login"
+               th:text="#{login.link.value}"
+               th:data-title="#{login.data.title}">
+                    Log in
+            </a>
+            <a class="p-2 text-dark describable" href="/register" th:text="#{register.link.text}"
+               th:data-title="#{register.data.title}">
+                    Register
+            </a>
         </nav>
     </div>
 </header>
@@ -38,16 +41,6 @@
 <footer style="width:100%; height: 20px; background: black">
 </footer>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#locales").change(function () {
-            var selectedOption = $('#locales').val();
-            if (selectedOption != ''){
-                window.location.replace('international?lang=' + selectedOption);
-            }
-        });
-    });
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/script.js"></script>
 </html>

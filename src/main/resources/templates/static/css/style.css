@@ -306,11 +306,11 @@ table {
     margin-top: 50px;
 }
 
-descr:hover::after, .describable:hover::after {
+.describable:hover::after {
     content: attr(data-title);
-    background: #ffe;
-    padding: 5px;
-    border: 1px solid #666;
+    font-size: smaller;
+    background: #f8f9f8fa;
+    padding: 3px;
     position: absolute;
     top: 20px;
 }

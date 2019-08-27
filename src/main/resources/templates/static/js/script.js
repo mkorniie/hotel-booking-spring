@@ -1,3 +1,4 @@
+// console.log("Konnichiha!");
 
 //I18n
 $(document).ready(function() {
