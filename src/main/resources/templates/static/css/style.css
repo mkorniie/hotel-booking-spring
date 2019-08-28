@@ -357,3 +357,11 @@ footer {
 .main-message > h1 {
     text-align: center;
 }
+
+.ml18 {
+    margin-left: 18px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}

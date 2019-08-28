@@ -25,8 +25,7 @@
 <br>
 <div class="m-4"><h2 th:text="#{user.bills.table.title}">Bills</h2></div>
 <br>
-<p style="color: #078807;
-    margin-left: 10px;" th:text="#{total.sum} + ${total}"> Paid in total: </p>
+<p class="text-success ml10" th:text="#{total.sum} + ${total}"> Paid in total: </p>
 <br>
 <table class="table">
     <thead>
@@ -48,7 +47,7 @@
     </tr>
     </tbody>
 </table>
-    <nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
+    <nav class="ml18" aria-label="my-nav" th:if="${page.totalPages > 0}">
         <ul class="pagination">
             <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
                 <a class="page-link" th:href="'/admin/bills?page=' + ${i}" th:text="${i + 1}"> Page number</a>

@@ -10,6 +10,8 @@ $(document).ready(function() {
     });
 });
 
+// TODO: Apply poppers (popper.js) instead of other stuff
+// $('.frequency').forEach(el => new Tooltip(el));
 
 // //Custom tags
 // function customTag(tagName, tagFunction) {

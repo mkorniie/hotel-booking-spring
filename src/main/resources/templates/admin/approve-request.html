@@ -68,7 +68,7 @@
 </form>
 
 <a th:href="'/admin/?method=cancel&id=' + ${selected_request.getId()}">
-    <button style="margin-left: 10px" class="btn btn-warning" th:text="#{cancel.btn}" >Cancel</button>
+    <button class="btn btn-warning ml10" th:text="#{cancel.btn}" >Cancel</button>
 </a>
 
 <br>
@@ -94,7 +94,7 @@
         </tr>
     </tbody>
 </table>
-<nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
+<nav class="ml18" aria-label="my-nav" th:if="${page.totalPages > 0}">
     <ul class="pagination">
         <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
             <a class="page-link" th:href="'/admin/approve?page=' + ${i} + '&id=' + ${selected_request.getId()}" th:text="${i + 1}"> Page number</a>

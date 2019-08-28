@@ -46,7 +46,7 @@
     </tr>
     </tbody>
 </table>
-<nav style="margin-left: 18px" aria-label="my-nav" th:if="${page.totalPages > 0}">
+<nav class="ml18" aria-label="my-nav" th:if="${page.totalPages > 0}">
     <ul class="pagination">
         <li th:each="i: ${#numbers.sequence(0, page.getTotalPages() - 1)}" th:classappend="${page.getNumber() == i} ? active " class="page-item">
             <a class="page-link" th:href="'/admin/rooms?page=' + ${i}" th:text="${i + 1}"> Page number</a>
