@@ -54,7 +54,7 @@
         <div class="form-group col-2">
             <label for="room-select" th:text="#{approve.req.form.room.id}" >Room Id</label>
             <select class="browser-default custom-select" id="room-select" name="room-select">
-                <option th:each=" r : *{entries}" th:value="${r.getId()}" th:text="${r.getId()}">
+                <option th:each=" r : *{page.getContent()}" th:value="${r.getId()}" th:text="${r.getId()}">
                     Room Id
                 </option>
 <!--                <% List<Room> matchingRooms = (List<Room>) request.getAttribute("page");-->

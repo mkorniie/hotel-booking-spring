@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -111,7 +112,8 @@ public class RequestServiceImpl implements RequestService {
 
         model.addAttribute("selected_request", selected);
 
-        Page<Room> page = roomRepository.findAll(pageable);
+        List<Room> content = findMatchingRooms(selected);
+        Page<Room> page = new PageImpl<>(content);
         model.addAttribute("page", page);
 
         return ADMIN_REQUEST_APPROVE_PAGE.getCropPath();

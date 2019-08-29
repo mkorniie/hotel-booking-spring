@@ -35,8 +35,6 @@ public class AdminApproveController {
                 if (selected != null){
                     return service.showApprove(pageable, model, selected);
                 }
-
-
             } else if (method.equals("cancel")) {
                 service.cancel(id);
             }
