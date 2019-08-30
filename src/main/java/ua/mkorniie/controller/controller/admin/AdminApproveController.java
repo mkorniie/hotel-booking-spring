@@ -48,8 +48,7 @@ public class AdminApproveController {
     @PostMapping("/admin/approve")
     public String approveRequest( Model model,
                                   @RequestParam("id") Long requestId,
-                                  @RequestParam("room-select") Long roomId,
-                                  @PageableDefault( sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
+                                  @RequestParam("room-select") Long roomId) {
 
         if (!service.approve(requestId, roomId)) {
             model.addAttribute("method", "approve");

@@ -8,12 +8,6 @@ import ua.mkorniie.model.config.WebSecurityConfig;
 @Service
 public class SecurityServiceImpl implements SecurityService {
 
-//    @Autowired
-//    private AuthenticationManager authenticationManager;
-//
-//    @Autowired
-//    private UserDetailsService userDetailsService;
-
     @Override
     public String findLoggedInUsername() {
         return null;

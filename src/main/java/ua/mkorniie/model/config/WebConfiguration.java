@@ -18,23 +18,6 @@ import java.util.Locale;
 @EnableSpringDataWebSupport
 public class WebConfiguration implements WebMvcConfigurer {
 
-//    @Override
-//    public void configureViewResolvers(ViewResolverRegistry registry) {
-//        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-//        resolver.setPrefix("/templates/");
-//        resolver.setSuffix(".jsp");
-//        resolver.setViewClass(JstlView.class);
-//        registry.viewResolver(resolver);
-//    }
-
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//        // Users
-//        registry.addViewController("/home").setViewName("home");
-//        registry.addViewController("/").setViewName("home");
-//        registry.addViewController("/hello").setViewName("hello");
-//        registry.addViewController("/login").setViewName("login");
-//    }
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
