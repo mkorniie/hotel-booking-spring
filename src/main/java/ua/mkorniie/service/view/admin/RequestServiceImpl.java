@@ -134,7 +134,7 @@ public class RequestServiceImpl implements RequestService {
 
     private boolean datesOverlap(@NonNull Bill b, @NonNull Request selected) {
 
-        SimpleDateFormat sdf1 = new SimpleDateFormat("mm/dd/yyyy");
+        SimpleDateFormat sdf1 = new SimpleDateFormat("MM/dd/yyyy");
 
         try {
             Date selectedStart = new Date(sdf1.parse(selected.getStartDate()).getTime());
