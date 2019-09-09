@@ -154,11 +154,11 @@ public class RequestServiceImpl implements RequestService {
 
         List<Room> allRooms =  Lists.newArrayList(roomRepository.findAll());
 
-        for (Room r : allRooms) {
-            if (r.getRoomClass() == selected.getRoomClass()) {
-                if (r.getPlaces() >= selected.getPlaces()) {
-                    if (withinDateRange(r, selected)) {
-                        matching.add(r);
+        for (Room room : allRooms) {
+            if (room.getRoomClass() == selected.getRoomClass()) {
+                if (room.getPlaces() >= selected.getPlaces()) {
+                    if (withinDateRange(room, selected)) {
+                        matching.add(room);
                     }
                 }
             }

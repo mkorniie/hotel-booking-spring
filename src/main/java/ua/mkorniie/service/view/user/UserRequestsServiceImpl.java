@@ -89,9 +89,9 @@ public class UserRequestsServiceImpl implements UserRequestsService{
             throw new DateFormatException("Error parsing date string: " + daterange);
         }
 
-        for (String s : dates) {
-            formatTester(s);
-            result.add(s);
+        for (String date : dates) {
+            formatTester(date);
+            result.add(date);
         }
         return result;
     }

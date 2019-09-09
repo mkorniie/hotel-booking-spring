@@ -9,9 +9,9 @@ public enum Language {
     ua;
 
     public static Language of(Locale locale) throws LanguageNotFoundException {
-        for (Language l : Language.values()) {
-            if (locale.getLanguage().equals(l.name())) {
-                return l;
+        for (Language language : Language.values()) {
+            if (locale.getLanguage().equals(language.name())) {
+                return language;
             }
         }
 
