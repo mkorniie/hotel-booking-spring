@@ -122,9 +122,9 @@ public class RequestServiceImpl implements RequestService {
     private boolean withinDateRange(@NonNull Room r, @NonNull Request selected) {
         List<Bill> bills = Lists.newArrayList(billRepository.findAll());
 
-        for (Bill b : bills) {
-            if (Objects.equals(b.getRoom().getId(), r.getId())) {
-                if (datesOverlap(b, selected)) {
+        for (Bill bill : bills) {
+            if (Objects.equals(bill.getRoom().getId(), r.getId())) {
+                if (datesOverlap(bill, selected)) {
                     return false;
                 }
             }
