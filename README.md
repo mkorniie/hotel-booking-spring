@@ -64,3 +64,6 @@ http://localhost:8090/
         ![alt text](img/3.png)
  - Password encrypted (BCrypt)
  - JUnit, Mockito
+
+
+ - Dokerization (in progress)
