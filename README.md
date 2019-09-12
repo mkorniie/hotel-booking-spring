@@ -2,6 +2,11 @@
 
  Система Заказ гостиницы. Клиент заполняет Заявку, указывая количество мест в номере, класс апартаментов и время пребывания. Администратор просматривает поступившую Заявку, выделяет наиболее подходящий из доступных Номеров, после чего система выставляет Счет Клиенту. 
 
+## Status
+ - Dokerization (In progress)
+ - Deploying on Heroku (In progress)
+ - Cleancoding
+
 ## Установка
 
 Шаг 1. Скачайте репозиторий
@@ -64,6 +69,3 @@ http://localhost:8090/
         ![alt text](img/3.png)
  - Password encrypted (BCrypt)
  - JUnit, Mockito
-
-
- - Dokerization (in progress)
